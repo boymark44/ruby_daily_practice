@@ -42,15 +42,16 @@ puts custom_calculator(20, 4, "divide") # => 5
 puts "\n\n"
 
 
-# Solution suggested by Cody AI using "case"
+# Solution suggested by Cody AI Use symbols instead of strings for operation names in the
+# custom_calculator method. This can improve performance and reduce the risk of typos:
 def custom_calculator2(a, b, operation)
   case operation
   when :add then add(a, b)
   when :subtract then sub(a, b)
   when :multiply then mul(a, b)
   when :divide
-      # Conditional Statements i.e one-line if-statements
-      b.zero? ? "Cannot be divide by zeo" : div(a, b)
+    # Conditional Statements i.e one-line if-statements
+    b.zero? ? "Cannot be divide by zeo" : div(a, b)
   else
     "Invalid Operation"
   end

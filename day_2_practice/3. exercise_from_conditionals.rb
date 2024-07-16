@@ -44,6 +44,7 @@ puts "\n\n"
 
 # Solution suggested by Cody AI Use symbols instead of strings for operation names in the
 # custom_calculator method. This can improve performance and reduce the risk of typos:
+# Symbols are strings that you prepend a colon ":" insted of enclosing them with quotes.
 def custom_calculator2(a, b, operation)
   case operation
   when :add then add(a, b)
@@ -63,6 +64,18 @@ puts custom_calculator(3, 5, "multiply") # => 15
 puts custom_calculator(20, 4, "divide") # => 5
 puts "\n\n"
 
+
+# Utilize the guard clauses to handle edge cases early:
+def custom_calculator3(a, b, operation)
+  return "Invalid Operation" unless [:add, :subtract, :multiply, :divide].include?(operation)
+  return "Cannot be divide by zero" if operation == :divide and b.zero?
+end
+
+puts custom_calculator(3, 5, "add") # => 8
+puts custom_calculator(2, 5, "subtract") # => -13
+puts custom_calculator(3, 5, "multiply") # => 15
+puts custom_calculator(20, 4, "divide") # => 5
+puts "\n\n"
 
 #* Exercise 2: Mutliple Conditions.
 puts "Multiple Conditions: "

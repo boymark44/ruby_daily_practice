@@ -18,7 +18,21 @@ def div(a, b)
 end
 
 def custom_calculator(a, b, operation)
-
+  if operation == "add"
+    add(a, b)
+  elsif operation == "subtract"
+    sub(a, b)
+  elsif operation == "multiply"
+    mul(a, b)
+  elsif operation == "divide"
+    if b != 0
+      div(a, b)
+    else
+      "Cannot be divide by zero"
+    end
+  else
+    "Invalid Operation"
+  end
 end
 
 puts custom_calculator(3, 5, "add") # => 8
@@ -27,6 +41,26 @@ puts custom_calculator(3, 5, "multiply") # => 15
 puts custom_calculator(20, 4, "divide") # => 5
 puts "\n\n"
 
+
+# Solution suggested by Cody AI using "case"
+def custom_calculator2(a, b, operation)
+  case operation
+  when :add then add(a, b)
+  when :subtract then sub(a, b)
+  when :multiply then mul(a, b)
+  when :divide
+      # Conditional Statements i.e one-line if-statements
+      b.zero? ? "Cannot be divide by zeo" : div(a, b)
+  else
+    "Invalid Operation"
+  end
+end
+
+puts custom_calculator(3, 5, "add") # => 8
+puts custom_calculator(2, 5, "subtract") # => -13
+puts custom_calculator(3, 5, "multiply") # => 15
+puts custom_calculator(20, 4, "divide") # => 5
+puts "\n\n"
 
 
 #* Exercise 2: Mutliple Conditions.

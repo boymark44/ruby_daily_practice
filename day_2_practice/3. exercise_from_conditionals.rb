@@ -77,7 +77,7 @@ puts custom_calculator(3, 5, "multiply") # => 15
 puts custom_calculator(20, 4, "divide") # => 5
 puts "\n\n"
 
-#* Exercise 2: Mutliple Conditions.
+#* Exercise 2: Multiple Conditions.
 puts "Multiple Conditions: "
 
 # Define a divisible_by_three_and_four method that
@@ -87,7 +87,11 @@ puts "Multiple Conditions: "
 
 # Divisible by three and four:
 def divisible_by_three_and_four(num)
-
+  if num % 3 == 0 and num % 4 == 0
+    true
+  else
+    false
+  end
 end
 
 puts divisible_by_three_and_four(3) # => false
@@ -98,13 +102,17 @@ puts divisible_by_three_and_four(24) # => true
 puts "\n\n"
 
 
-# Declare a string_theory method that accepts a string as an argument.
+# Declare a string_theory function that accepts a string as an argument.
 # It should return true if the string has more than 4 characters
 # or if the string includes the character "B" (capital).
 
 # String Theory:
 def string_theory(string)
-
+  if string.length > 4 or string.include?("B")
+    true
+  else
+    false
+  end
 end
 
 puts string_theory("Big Mac") # => true
@@ -125,7 +133,11 @@ puts "If-Statements: "
 
 # Even or Odd Operations:
 def even_or_odd_operations(integer)
-
+  if integer.odd?
+    integer - 3
+  else
+    integer + 2
+  end
 end
 
 puts even_or_odd_operations(2) # => 4
@@ -139,15 +151,40 @@ puts "\n\n"
 #* Exercise 4: If-Elsif-Else Statements.
 puts "If-Elsif-Else Statements: "
 
-# Declare a numeric_energy method that accepts a number.
+# Declare a numeric_energy function that accepts a number.
 # If the number is positive, return the string "Positive"
 # If the number is negative, return the string "Negative"
 # If the number is zero, return the string "Zero Hero"
 
 # Numeric Energy:
 def numeric_energy(number)
-
+  if number.positive?
+    :Positive
+  elsif number.negative?
+    :Negative
+  else
+    "Zero Hero"
+  end
 end
+
+
+puts numeric_energy(5) # => Positive
+puts numeric_energy(10) # => Positive
+puts numeric_energy(-5) # => Negative
+puts numeric_energy(-8) # => Negative
+puts numeric_energy(0) # => Zero Hero
+puts "\n\n"
+
+
+# Solving Numeric Energy using "case method" for better readability
+def numeric_energy(number)
+  case
+  when number > 0 then :Positive
+  when number < 0 then :Negative
+  else "Zero Hero"
+  end
+end
+
 
 puts numeric_energy(5) # => Positive
 puts numeric_energy(10) # => Positive

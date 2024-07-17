@@ -11,7 +11,7 @@ puts "String Index Position: "
 # Same first and last letter:
 def same_first_and_last_letter(string)
   # Compare the first and last index of the string through Bracket Syntax:
-
+  string[0] == string[-1]
 end
 
 puts same_first_and_last_letter("runner") # => true
@@ -28,7 +28,7 @@ puts
 
 # Three number sum:
 def three_number_sum(numbers)
-
+  numbers[0].to_i + numbers[1].to_i + numbers[2].to_i
 end
 
 puts three_number_sum("123") # => 6
@@ -47,10 +47,9 @@ puts "String Slicing: "
 # Define a first_three_characters method that accepts a string.
 # The method should return the first 3 characters of the string.
 
-# First three characters:
+# Solve using Bracket Syntax:
 def first_three_characters(string)
-  # Solve using the bracket syntax:
-
+  string[0, 3]
 end
 
 puts first_three_characters("dynasty") # => dyn
@@ -58,12 +57,51 @@ puts first_three_characters("empire") # => emp
 puts
 
 
+# Solve using an each_char method:
+def first_three_characters2(string)
+  result = ""
+  count = 0
+
+  string.each_char do |char|
+    result << char
+    if count == 2
+      break
+    else
+      count += 1
+    end
+
+    if count != 2
+      count += 1
+    else
+      break
+    end
+  end
+
+  result
+end
+
+puts first_three_characters("dynasty") # => dyn
+puts first_three_characters("empire") # => emp
+puts
+
+
+
 # Define a five_from_the_end method that accepts a string.
 # The method should return the last 5 characters of the string.
 
-# Five from the end:
+# Using a bracket syntax:
 def five_from_the_end(string)
+  string[-5, 5]
+end
 
+puts five_from_the_end("dynasty") # => nasty
+puts five_from_the_end("rhinoceros") # => ceros
+puts "\n\n"
+
+
+# Using the slice method:
+def five_from_the_end(string)
+  string.slice(-5, 5)
 end
 
 puts five_from_the_end("dynasty") # => nasty
@@ -81,9 +119,25 @@ puts "String Length and Comparison: "
 # The method should return a Boolean that reflects whether
 # the string has more than 7 characters.
 
-# Long word:
+# Lengthy approach:
 def long_word(string)
+  string_length = string.length
 
+  if string_length > 7
+    true
+  else
+    false
+  end
+end
+
+puts long_word("Ruby") # => false
+puts long_word("Magnificent") # => true
+puts
+
+
+# Not-so lengthy:
+def long_word1(string)
+  string.length > 7
 end
 
 puts long_word("Ruby") # => false
@@ -97,7 +151,7 @@ puts
 
 # First longer than second:
 def first_longer_than_second(string1, string2)
-
+  string1.length > string2.length
 end
 
 puts first_longer_than_second("Python", "Ruby") # => true

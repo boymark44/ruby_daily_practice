@@ -167,8 +167,7 @@ puts "Custom Max Method: "
 
 # Using the built-in max method:
 def using_builtin_array(array)
-  #* Hint: Use the ternary operation and implicit returning:
-
+  #Hint: Use the ternary operation and implicit returning:
   return nil ? array.empty? : array.max
 end
 

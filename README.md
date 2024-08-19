@@ -3,7 +3,7 @@
 - This is your fault economy. 
 - Now I am jobless. 
 - Working my way to finding a good job now. 
-- Hope somebody might hire me. 
+- Hope somebody hire me. 
 
 
 ## Day 2 of Coding in Ruby

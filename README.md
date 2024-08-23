@@ -7,6 +7,12 @@
 
 
 ## Day 2 of Coding in Ruby
-- Well, atleast for Day 2. I did some coding. I am so fucking proud of myself. 
+- Well, at least for Day 2. I did some coding. I am so fucking proud of myself. 
 - Another incremental progress. Slow yet significant. 
 - Added a new file called "try_ruby.rb"
+- Completed 
+
+
+## Day 3 of Coding in Ruby 
+- Well, we should make a new template first to streamline the process. 
+- Then code, code and coooooode. 

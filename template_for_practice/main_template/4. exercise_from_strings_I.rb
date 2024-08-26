@@ -60,8 +60,8 @@ def first_three_characters2(string)
 
 end
 
-puts first_three_characters("dynasty") # => dyn
-puts first_three_characters("empire") # => emp
+puts first_three_characters2("dynasty") # => dyn
+puts first_three_characters2("empire") # => emp
 puts
 
 
@@ -111,8 +111,8 @@ def long_word1(string)
 
 end
 
-puts long_word("Ruby") # => false
-puts long_word("Magnificent") # => true
+puts long_word1("Ruby") # => false
+puts long_word1("Magnificent") # => true
 puts
 
 

@@ -1,0 +1,334 @@
+#* Exercise 1: The Map and Collect Methods. (map, collect)
+
+puts "\nThe Map and Collect Methods: "
+
+# Instruction: Store the string length of every bird from the birds array.
+birds = %w[eagle sparrow pigeon hawk penguin]
+
+
+#* Solution: Using the regular convention(use the .each method to iterate):
+
+
+
+puts
+
+
+#* Using the map method:
+
+
+
+puts
+
+
+#* Using the collect method:
+
+
+
+#* Exercise 2: The Select and Reject Methods. (select, reject)
+puts "\n\nThe Select and Reject: "
+
+words = %w[racecar selfless sentences level]
+
+
+#* Solution: Using the select method - select those words that are palindrome.
+
+
+puts
+
+
+#* Solution: Using the reject method - reject those words that are not palindrome.
+
+
+puts
+
+
+#* Using the select and reject methods at the same time:
+
+
+
+#* Exercise 3: The Partition Method. (partition)
+puts "\n\nThe Partition Method: "
+
+foods = %w[Steak Vegetables Steak-Burger Kale Tofu Tuna-Steaks]
+
+# good_foods = (foods that include the word "Steak")
+# bad_foods = (foods that does not include the word "Steak")
+
+
+#* Solution: Using both the select and reject methods to accomplish the goal of partitioning:
+
+
+puts
+
+
+#* Solution: Using the partition method to automatically partition the good_foods from the bad_foods:
+
+
+
+
+#* Exercise 4: The Find and Detect Methods in Ruby. (find, detect)
+puts "\n\nThe Find and Detect Methods in Ruby: "
+
+# find and detect - checks any array element that satisfy a condition first over others and keep track of it.
+
+#* Solution: Using the find and detect methods to return the only element that satisfies contains the character "e":
+words = %w[dictionary refrigerator platypus microwave]
+
+
+# Using find:
+
+
+# Using detect:
+
+
+
+#* Exercises 5: Unlimited Method Arguments.
+puts "\n\nThe Unlimited Method Arguments: "
+
+# Define a method called `adder` that accepts any number of arguments.
+# The method prints the arguments to the console and calculates the sum of the arguments.
+# The sum is returned by the method.
+#
+# *Arguments*
+# - `*numbers`: Any number of arguments.
+#
+# *Examples*
+# ```
+# p adder(1, 2, 3, 4, 5) #=> [1, 2, 3, 4, 5]\n15
+# ```
+
+def adder(*numbers)
+
+end
+
+p adder(1) # => [1], 1
+p adder(1, 2) # => [1, 2], 3
+p adder(1, 2, 3) # => [1, 2, 3], 6
+p adder(1, 2, 3, 4) # => [1, 2, 3, 4], 10
+p adder(1, 2, 3, 4, 5) # => [1, 2, 3, 4, 5], 15
+p adder # => 0, []
+puts
+
+
+def adder(a, b, *numbers, c, d)
+
+end
+
+p adder(1, 2, 3, 4) # => [], 0
+p adder(1, 2, 3, 4, 5) # => [3], 3
+p adder(1, 2, 3, 4, 5, 6) # => [3, 4], 7
+
+
+
+#* Exercises 6: Defining a custom max method.
+puts "\n\nCustom Max Method: "
+
+# Define a custom_max method that accepts an array.
+# The method should return the largest value in the array.
+# If the array is empty, the method should return nil.
+# Do not use the max method in your solution!
+
+# Solution: Using the built-in max method.
+def using_builtin_array(array)
+  # Hint: Use the ternary operation and implicit returning:
+
+end
+
+p using_builtin_array([434.12, 723.99, 84.12, 649.92]) # => 723.99
+p using_builtin_array([8, 10, 2, 1, 19, 4]) # => 19
+p using_builtin_array(["Tree", "Elm", "Zebra"]) # => "Zebra"
+p using_builtin_array([]) # => nil
+puts
+
+
+#* Solution: Using a Custom Max approach:
+def custom_max(array)
+  # Base Case:
+
+
+end
+
+p custom_max([434.12, 723.99, 84.12, 649.92]) # => 723.99
+p custom_max([8, 10, 2, 1, 19, 4]) # => 19
+p custom_max(["Tree", "Elm", "Zebra"]) # => "Zebra"
+p custom_max([]) # => nil
+
+
+
+#* Exercise 7: The Each Method.
+
+puts "\n\nThe Each Method: "
+
+# Define a double_elements method that accepts an array of numbers.
+# The method should return a new array where each element is
+# double its value from the original array.
+
+#* Solution:
+def double_elements(numbers_array)
+
+end
+
+p double_elements([1, 2, 3, 4, 5]) # => [2, 4, 6, 8, 10]
+p double_elements([10, 20, 30]) # => [20, 40, 60]
+puts
+
+
+# Define an extract_long_words method that accepts an array of strings.
+# The method should return a new array of only the strings that
+# have more than 7 characters.
+
+#* Solution:
+def extract_long_words(string_array)
+
+end
+
+p extract_long_words(["spaghetti", "penne", "fettuccine", "ziti"]) # => ["spaghetti", "fettuccine"]
+p extract_long_words(["lasagna", "ravioli", "cannelloni", "tagliatelle"]) # => ["cannelloni", "tagliatelle"]
+puts
+
+
+# Define a pastas_and_sauces method that accepts two arrays.
+# The first array will hold pasta types and the second will hold sauces.
+# The method should return an array consisting of all the combinations
+# of pastas and sauce. Combine each pasta and sauce in a new string
+# (see example below). Make sure to capitalize each pasta and sauce
+
+# Solution:
+def pastas_and_sauces(pasta, sauce)
+
+end
+
+p pastas_and_sauces(["fettucine", "spaghetti", "penne"], ["alfredo", "bolognese", "pesto"]) # => ["Fettucine with Alfredo sauce.", "Fettucine with Bolognese sauce.", "Fettucine with Pesto sauce.", "Spaghetti with Alfredo sauce.", "Spaghetti with Bolognese sauce.", "Spaghetti with Pesto sauce.", "Penne with Alfredo sauce.", "Penne with Bolognese sauce.", "Penne with Pesto sauce."]
+
+
+
+#* Exercises 8: The Each with Index.
+puts "\n\nThe Each with Index: "
+
+# Define a product_of_number_and_index method that accepts an array of numbers.
+# The method should iterate over the elements. For each element,
+# it should multiply the element by its index position. It should
+# then add that product to a rolling sum. Return the final sum.
+# If the array has no elements, the final sum should be 0.
+
+#* Solution:
+def product_of_number_and_index(numbers_array)
+
+end
+
+p product_of_number_and_index([1, 2, 3]) # => 8
+p product_of_number_and_index([]) # => 0
+puts
+
+
+#* Solution: Solve using the each_with_index method: (Mutliply the element with its index)
+def product_of_number_and_index(numbers_array)
+  # Implement the same operation using the each_with_index method only:
+
+end
+
+p product_of_number_and_index([1, 2, 3]) # => 8
+p product_of_number_and_index([]) # => 0
+
+
+
+#* Exercises 9: Filtering Methods.
+puts "\n\nFiltering Methods: "
+
+# Define a reverse_all method that accepts an array of strings.
+# The method should return an array with all the strings in reversed order.
+
+#* Solution:
+def reverse_all(string_array)
+  # Use the map method:
+
+end
+
+p reverse_all(["cat", "bat", "tub"]) # => ["tac", "tab", "but"]
+p reverse_all(["forest"]) # => ["tserof"]
+p reverse_all([]) # => []
+puts
+
+
+# Define a words_with_letter method that accepts an array of strings and a letter.
+# The method should return an array of the strings that include the letter.
+
+#* Solution:
+def words_with_letter(string_array, letter)
+  # Use the select method to select those strings that contains the included letter:
+
+end
+
+p words_with_letter(["cat", "bat", "tub"], "a") # => ["cat", "bat"]
+p words_with_letter(["cat", "bat", "tub"], "u") # => ["tub"]
+p words_with_letter(["cat", "bat", "tub"], "z") # => []
+puts
+
+
+# Define an evens_and_odds method that accepts an array of numbers.
+# The method should segment the array into two arrays.
+# The first array should contain the even numbers.
+# The second array should contain the odd numbers.
+# Return an array consisting of the two arrays.
+
+#* Solution:
+def evens_and_odds(numbers_array)
+  # Use the partition method:
+
+end
+
+p evens_and_odds([1, 2, 3, 4, 5]) # => [[2, 4], [1, 3, 5]]
+p evens_and_odds([2, 4, 6, 8]) # => [[2, 4, 6, 8], []]
+p evens_and_odds([]) # => [[], []]
+
+
+
+#* Exercises 10: Unlimited Method Arguments.
+puts "\n\nUnlimited Method Arguments For Strings: "
+
+# Define a sum_of_string_lengths method that accepts
+# any number of strings. The method return the sum
+# of the lengths of the strings.
+
+#* Solution:
+def sum_of_string_lengths(*strings)
+
+end
+
+p sum_of_string_lengths("bob", "loves", "burgers") # => 15
+p sum_of_string_lengths("coding", "is", "so", "fun") # => 13
+p sum_of_string_lengths() # => 0
+
+
+
+#* Exercise 11: Any? and All? Predicate Methods.
+puts "\n\nAny? and All?: "
+
+# Define a has_greater_than_seven_characters method that
+# accepts an array of strings. It should return a Boolean reflecting
+# whether any array element has more than 7 characters.
+
+#* Solution:
+def has_greater_than_seven_characters(array)
+  # Use the any? method:
+
+end
+
+p has_greater_than_seven_characters(["ruby", "exercise", "cat"]) # => true
+p has_greater_than_seven_characters(["forest"]) # => false
+p has_greater_than_seven_characters([]) # => false
+puts
+
+
+# Define an against_all_odds method that accepts an array of numbers.
+# It should return a Boolean reflecting whether all array elements
+# are even.
+
+#* Solution:
+def against_all_odds(array)
+  # Use the all? method:
+
+end
+
+p against_all_odds([3, 5, 7, 2]) # => false
+p against_all_odds([2, 4, 6]) # => true

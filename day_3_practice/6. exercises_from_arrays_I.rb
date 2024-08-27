@@ -8,7 +8,7 @@ puts "Array Indexing: "
 
 #* First and last elements:
 def first_and_last(string_array)
-
+  string_array[0] + string_array[-1]
 end
 
 p first_and_last(["a", "b", "c"]) # => "ac"
@@ -24,7 +24,7 @@ puts
 
 #* Product of even indices:
 def product_of_even_indices(integer_array)
-
+  integer_array[0] * integer_array[2] * integer_array[4]
 end
 
 p product_of_even_indices([1, 2, 3, 4, 5, 6]) # => 15
@@ -40,17 +40,16 @@ puts
 #* First letter of last string:
 def first_letter_of_last_string(string_array)
   # Using the 2D indexing:
-
+  string_array[-1][0]
 end
 
 p first_letter_of_last_string(["cat", "dog", "zebra"]) # => "z"
 p first_letter_of_last_string(["nonsense"])            # => "n"
-puts "\n\n"
 
 
 
 #* Exercise 2: Extracting multiple array elements.
-puts "Extracting Multiple Array Elements: "
+puts "\n\nExtracting Multiple Array Elements: "
 
 # Define a split_in_two method that accepts an array.
 # I'd like to split the array into two arrays.
@@ -61,7 +60,14 @@ puts "Extracting Multiple Array Elements: "
 
 # Split in two:
 def split_in_two(array)
+  array_length = array.length
 
+  midpoint = (array_length / 2).round
+
+  first_half = array.first(midpoint)
+  second_half = array.last(array_length - midpoint)
+
+  [first_half, second_half]
 end
 
 p split_in_two(["A", "B"]) # => [["A"], ["B"]]

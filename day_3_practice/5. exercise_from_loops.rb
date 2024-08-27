@@ -2,13 +2,27 @@
 puts "\nWhile Loop: "
 
 # Implement a simple while loop that counts from 1 to 10:
+count = 1
 
+while count <= 10
+  puts count
 
+  count += 1
+end
+puts
+puts count # => 11
 puts
 
 
 # Implement a simple while loop that appends the character "a" for every iteration:
+letters = "a"
 
+while letters.length < 5
+  puts letters
+
+  letters << "a"
+end
+puts
 
 
 
@@ -20,14 +34,34 @@ money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the even
 
 
 # Without using the next keyword:
+current_index = 0
+final_index = money_sentence.length - 1
 
+while current_index < final_index
+  if money_sentence[current_index] == "$"
+    puts "Dollars is found at #{current_index}."
+  end
 
+  current_index += 1
+end
 puts
 
 
 # Using the next keyword:
+money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
+current_index = 0
+final_index = money_sentence.length - 1
 
+while current_index < final_index
+  if money_sentence[current_index] != "$"
+    current_index += 1
+    next
+  end
 
+  puts "Dollars is found at #{current_index}."
+  current_index += 1
+end
+puts
 
 
 #* Exercise 3: The Break Keyword.
@@ -37,10 +71,18 @@ puts "\n\nThe Break Keyword: "
 money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
 # Solution:
-def first_money_index
+current_index = 0
+final_index = money_sentence.length - 1
+first_money_index = nil # => Set the first_index to be "nil"
 
+while current_index < final_index
+  if money_sentence[current_index] == "$"
+    first_money_index = current_index
+    break
+  end
+
+  current_index += 1
 end
-
 puts first_money_index # => 7
 
 
@@ -62,11 +104,10 @@ puts "\n\nRecursion: Factorial. "
 # Solution:
 def factorial(num)
   # Set the base case:
-
-
+  return 1 if num == 1
 
   # Recursive case:
-
+  num * factorial(num - 1)
 end
 
 puts factorial(4) # => 24
@@ -89,7 +130,17 @@ puts "\n\nRecursion: Reversing a String. "
 
 # Solution:
 def reverse_string(string)
+  first_index = 0
+  current_index_from_rear = string.length - 1
+  reversed_text = ""
 
+  while current_index_from_rear >= first_index
+    reversed_text << string[current_index_from_rear]
+
+    current_index_from_rear -= 1
+  end
+
+  reversed_text
 end
 
 puts reverse_string("straw hat") # => tah warts
@@ -105,7 +156,13 @@ puts
 
 # Solution:
 def reverse_string(string)
+  reversed_string = ""
 
+  string.each_char do |char|
+    reversed_string = char + reversed_string
+  end
+
+  reversed_string
 end
 
 puts reverse_string("straw hat") # => tah warts
@@ -120,10 +177,10 @@ puts
 # Solution:
 def reverse_string(string)
   # Base Case:
-
+  return string if string.length <= 1
 
   # Recursive Case:
-
+  string[-1] + reverse_string(string[0...-1])
 end
 
 # Explanation:
@@ -132,7 +189,7 @@ end
 # to reverse_string on the rest of the string. The base case for the recursion is when the string
 # has a length of 1 or less, in which case the string is returned as is.
 
-# Underlying Principle:
+# Underlying Process:
 # reverse_string("straw hat")
 #  "t" + reverse_string("straw ha")
 #      "a" + reverse_string("straw h")
@@ -157,7 +214,21 @@ puts "\n\nFizzBuzz Problem: "
 # For numbers divisible by both 3 and 5, print “FizzBuzz”. Otherwise, just print the number.
 
 def fizzbuzz(num)
+  i = 1
 
+  while i <= num
+    if i % 3 == 0 and i % 5 == 0
+      puts "FizzBuzz"
+    elsif i % 3 == 0
+      puts "Fizz"
+    elsif i % 5 == 0
+      puts "Buzz"
+    else
+      puts i
+    end
+
+    i += 1
+  end
 end
 
 puts fizzbuzz(30)

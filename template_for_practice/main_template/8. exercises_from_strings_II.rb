@@ -2,8 +2,8 @@
 
 puts "Custom Count: "
 
-# Define a custom_count method that accepts a string and a string
-# of search characters. The method should count how many times the
+# Define a custom_count method that accepts a string and search characters.
+# The method should count how many times the
 # search characters appear in the original string. Do not use the
 # built-in count method in your solution.
 

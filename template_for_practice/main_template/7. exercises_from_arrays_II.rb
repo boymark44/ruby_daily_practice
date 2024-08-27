@@ -43,6 +43,8 @@ puts
 
 
 #* Using the select and reject methods at the same time:
+animals = %w[cheetah cat lion elephant dog cow]
+
 
 
 
@@ -71,7 +73,7 @@ puts "\n\nThe Find and Detect Methods in Ruby: "
 
 # find and detect - checks any array element that satisfy a condition first over others and keep track of it.
 
-#* Solution: Using the find and detect methods to return the only element that satisfies contains the character "e":
+#* Solution: Using the find and detect methods to return the only element that contains the character "e":
 words = %w[dictionary refrigerator platypus microwave]
 
 
@@ -85,10 +87,9 @@ words = %w[dictionary refrigerator platypus microwave]
 #* Exercises 5: Unlimited Method Arguments.
 puts "\n\nThe Unlimited Method Arguments: "
 
-# Define a method called `adder` that accepts any number of arguments.
-# The method prints the arguments to the console and calculates the sum of the arguments.
-# The sum is returned by the method.
-#
+# Define a method called `adder` that accepts integers.
+# The method prints the integers to the console and calculates the its sum.
+# The sum is return by the method.
 # *Arguments*
 # - `*numbers`: Any number of arguments.
 #
@@ -100,6 +101,7 @@ puts "\n\nThe Unlimited Method Arguments: "
 def adder(*numbers)
 
 end
+
 
 p adder(1) # => [1], 1
 p adder(1, 2) # => [1, 2], 3
@@ -128,9 +130,9 @@ puts "\n\nCustom Max Method: "
 # If the array is empty, the method should return nil.
 # Do not use the max method in your solution!
 
-# Solution: Using the built-in max method.
+#* Solution: Using the built-in max method.
 def using_builtin_array(array)
-  # Hint: Use the ternary operation and implicit returning:
+  # Use the ternary operation and implicit returning:
 
 end
 
@@ -193,7 +195,7 @@ puts
 # of pastas and sauce. Combine each pasta and sauce in a new string
 # (see example below). Make sure to capitalize each pasta and sauce
 
-# Solution:
+#* Solution:
 def pastas_and_sauces(pasta, sauce)
 
 end
@@ -221,7 +223,7 @@ p product_of_number_and_index([]) # => 0
 puts
 
 
-#* Solution: Solve using the each_with_index method: (Mutliply the element with its index)
+#* Solution: A shorter approach.
 def product_of_number_and_index(numbers_array)
   # Implement the same operation using the each_with_index method only:
 

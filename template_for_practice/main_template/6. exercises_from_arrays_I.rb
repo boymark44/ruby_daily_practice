@@ -45,12 +45,11 @@ end
 
 p first_letter_of_last_string(["cat", "dog", "zebra"]) # => "z"
 p first_letter_of_last_string(["nonsense"])            # => "n"
-puts "\n\n"
 
 
 
 #* Exercise 2: Extracting multiple array elements.
-puts "Extracting Multiple Array Elements: "
+puts "\n\nExtracting Multiple Array Elements: "
 
 # Define a split_in_two method that accepts an array.
 # I'd like to split the array into two arrays.
@@ -68,4 +67,3 @@ p split_in_two(["A", "B"]) # => [["A"], ["B"]]
 p split_in_two(["A", "B", "C", "D"]) # => [["A", "B"], ["C","D"]]
 p split_in_two(["A", "B", "C"]) # => [["A", "B"], ["C"]]
 p split_in_two(["A", "B", "C", "D", "E"]) # => [["A", "B", "C"],["D","E"]]
-puts

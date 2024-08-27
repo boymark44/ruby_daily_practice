@@ -37,9 +37,7 @@ puts "\n\nThe Break Keyword: "
 money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
 # Solution:
-def first_money_index
 
-end
 
 puts first_money_index # => 7
 
@@ -132,7 +130,7 @@ end
 # to reverse_string on the rest of the string. The base case for the recursion is when the string
 # has a length of 1 or less, in which case the string is returned as is.
 
-# Underlying Principle:
+# Underlying Process:
 # reverse_string("straw hat")
 #  "t" + reverse_string("straw ha")
 #      "a" + reverse_string("straw h")

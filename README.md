@@ -16,3 +16,5 @@
 ## Day 3 of Coding in Ruby 
 - Well, we should make a new template first to streamline the process. 
 - Then code, code and coooooode. 
+- Day 3 is done. 
+- Next is the Day 4 tomorrow. So do it. Seize the moment and do not let the momentum die. 

@@ -8,7 +8,7 @@ puts "Array Indexing: "
 
 #* First and last elements:
 def first_and_last(string_array)
-
+  string_array[0] + string_array[-1]
 end
 
 p first_and_last(["a", "b", "c"]) # => "ac"

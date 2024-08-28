@@ -1,7 +1,7 @@
 #* Exercise 1: Calling a method from another method.
 puts "\nCalling a method from another method: "
 
-#* Solution: Create a custom calculator.
+#* Solution: Implement a simple calculator using an if-else statements.
 def add(a, b)
   a + b
 end

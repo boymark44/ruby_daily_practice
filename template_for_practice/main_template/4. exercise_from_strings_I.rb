@@ -1,5 +1,4 @@
 #* Exercise 1: String Index Position.
-#* Methods: Bracket Syntax
 puts "\nString Index Position: "
 
 # Define a same_first_and_last_letter method that accepts a string.
@@ -39,7 +38,6 @@ puts three_number_sum("000") # => 0
 
 
 #* Exercise 2: String Slicing.
-#* Methods: Bracket Syntax
 puts "\n\nString Slicing: "
 
 # Define a first_three_characters method that accepts a string.
@@ -89,7 +87,6 @@ puts five_from_the_end("rhinoceros") # => ceros
 
 
 #* Exercise 3: String Length and Comparison.
-#* Methods: length, size
 puts "\n\nString Length and Comparison: "
 
 # Define a long_word method that accepts a string.

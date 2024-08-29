@@ -18,3 +18,9 @@
 - Then code, code and coooooode. 
 - Day 3 is done. 
 - Next is the Day 4 tomorrow. So do it. Seize the moment and do not let the momentum die. 
+
+
+## Day 4 of Coding in Ruby
+- I finished the exercises 1 until 4.
+- Currently in 5 until 8. 
+- Grind your way up dude.

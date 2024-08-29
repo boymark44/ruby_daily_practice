@@ -7,9 +7,9 @@ birds = %w[eagle sparrow pigeon hawk penguin]
 
 
 #* Solution: Using the regular convention(use the .each method to iterate):
-
-
-
+bird_cage = []
+birds.each { |bird| bird_cage << bird.length }
+p bird_cage # => [5, 7, 6, 4, 7]
 puts
 
 

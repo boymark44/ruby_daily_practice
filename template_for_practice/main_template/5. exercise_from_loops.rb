@@ -19,13 +19,13 @@ puts "\n\nThe Next Keyword: "
 money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
 
-# Without using the next keyword:
+#* Solution: Without using the next keyword.
 
 
 puts
 
 
-# Using the next keyword:
+#* Solution: Using the next keyword.
 
 
 

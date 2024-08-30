@@ -32,14 +32,14 @@ words = %w[racecar selfless sentences level]
 
 
 #* Solution: Using the select method - select those words that are palindrome.
-
-
+palindromes = words.select { |word| word == word.reverse }
+p palindromes # => ["racecar", "level"]
 puts
 
 
 #* Solution: Using the reject method - reject those words that are not palindrome.
-
-
+palindromes = words.reject { |word| word == word.reverse }
+p palindromes # => ["selfless", "sentences"]
 puts
 
 

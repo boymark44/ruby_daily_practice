@@ -24,3 +24,4 @@
 - I finished the exercises 1 until 4.
 - Currently in 5 until 8. 
 - Grind your way up dude.
+- Finished the 7 and 8 tonight. 

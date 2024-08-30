@@ -14,13 +14,14 @@ puts
 
 
 #* Using the map method:
-
-
-
+bird_cage = birds.map { |bird| bird.length }
+p bird_cage # => [5, 7, 6, 4, 7]
 puts
 
 
 #* Using the collect method:
+bird_cage = birds.collect { |bird| bird.length }
+p bird_cage # => [5, 7, 6, 4, 7]
 
 
 

@@ -45,7 +45,7 @@ puts
 
 #* Using the select and reject methods at the same time:
 animals = %w[cheetah cat lion elephant dog cow]
-
+p animals.reject { |animal| animal.include?("c") } # => ["lion", "elephant", "dog"]
 
 
 
@@ -59,13 +59,17 @@ foods = %w[Steak Vegetables Steak-Burger Kale Tofu Tuna-Steaks]
 
 
 #* Solution: Using both the select and reject methods to accomplish the goal of partitioning:
-
-
+good_foods = foods.select { |food| food.include?("Steak") }
+bad_foods = foods.reject { |food| food.include?("Steak") }
+p good_foods # => ["Steak", "Steak-Burger", "Tuna-Steaks"]
+p bad_foods # => ["Vegetables", "Kale", "Tofu"]
 puts
 
 
 #* Solution: Using the partition method to automatically partition the good_foods from the bad_foods:
-
+good_foods, bad_foods = foods.partition { |food| food.include?("Steak") }
+p good_foods # => ["Steak", "Steak-Burger", "Tuna-Steaks"]
+p bad_foods # => ["Vegetables", "Kale", "Tofu"]
 
 
 
@@ -79,9 +83,10 @@ words = %w[dictionary refrigerator platypus microwave]
 
 
 # Using find:
-
+p words.find { |word| word.include?("e") } # => "refrigerator"
 
 # Using detect:
+p words.detect { |word| word.include?("e") } # => "refrigerator"
 
 
 
@@ -100,7 +105,13 @@ puts "\n\nThe Unlimited Method Arguments: "
 # ```
 
 def adder(*numbers)
+  p numbers
 
+  rolling_sum = 0
+
+  numbers.each { |number| rolling_sum += number }
+
+  rolling_sum
 end
 
 
@@ -114,7 +125,13 @@ puts
 
 
 def adder(a, b, *numbers, c, d)
+  p numbers
 
+  rolling_sum = 0
+
+  numbers.each { |number| rolling_sum += number }
+
+  rolling_sum
 end
 
 p adder(1, 2, 3, 4) # => [], 0
@@ -134,7 +151,7 @@ puts "\n\nCustom Max Method: "
 #* Solution: Using the built-in max method.
 def using_builtin_array(array)
   # Use the ternary operation and implicit returning:
-
+  array.empty? ? nil : array.max
 end
 
 p using_builtin_array([434.12, 723.99, 84.12, 649.92]) # => 723.99
@@ -147,8 +164,15 @@ puts
 #* Solution: Using a Custom Max approach:
 def custom_max(array)
   # Base Case:
+  return nil if array.empty?
 
+  largest_element = array[0]
 
+  array.each do |current_element|
+    largest_element = current_element if current_element > largest_element
+  end
+
+  largest_element
 end
 
 p custom_max([434.12, 723.99, 84.12, 649.92]) # => 723.99

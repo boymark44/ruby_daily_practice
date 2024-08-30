@@ -215,7 +215,13 @@ puts
 
 #* Solution:
 def extract_long_words(string_array)
+  long_words = []
 
+  string_array.each do |string|
+    long_words << string if string.length > 7
+  end
+
+  long_words
 end
 
 p extract_long_words(["spaghetti", "penne", "fettuccine", "ziti"]) # => ["spaghetti", "fettuccine"]

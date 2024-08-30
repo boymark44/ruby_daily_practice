@@ -40,7 +40,7 @@ def custom_delete(string, deletion_characters)
   new_string = ""
 
   string.each_char do |character|
-    new_string << character unless character.include?(deletion_characters)
+    new_string << character unless deletion_characters.include?(character)
   end
 
   new_string

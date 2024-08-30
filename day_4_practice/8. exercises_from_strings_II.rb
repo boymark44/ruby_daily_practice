@@ -9,7 +9,13 @@ puts "Custom Count: "
 
 #* Solution:
 def custom_count(strings, search_character)
+  count = 0
 
+  strings.each_char do |character|
+    count += 1 if search_character.include?(character)
+  end
+
+  count
 end
 
 p custom_count("Hello World", "l") # => 3
@@ -31,7 +37,13 @@ puts "\n\nCustom Delete: "
 
 #* Solution:
 def custom_delete(string, deletion_characters)
+  new_string = ""
 
+  string.each_char do |character|
+    new_string << character unless deletion_characters.include?(character)
+  end
+
+  new_string
 end
 
 p custom_delete("cottage cheese", "c") # => "ottage heese"
@@ -51,7 +63,15 @@ puts "\n\nCustom Index: "
 
 #* Solution:
 def custom_index(string, search_term)
+  length = search_term.length
 
+  string.chars.each_with_index do |character, index|
+    sequence = string[index, length]
+
+    return index if sequence == search_term
+  end
+
+  nil
 end
 
 p custom_index("I am very handsome", "I") # => 0
@@ -73,8 +93,18 @@ puts "\n\nCustom Join: "
 
 #* Solution:
 def custom_join(strings, delimiter)
+  joined_strings = ""
 
+  final_index = strings.length - 1
+
+  strings.each_with_index do |string, index|
+    joined_strings << string
+    joined_strings << delimiter if index != final_index
+  end
+
+  joined_strings
 end
+
 
 p custom_join(["red", "green", "blue"], "!") # => "red!green!blue"
 p custom_join(["Big", "Mac"], "$$") # => "Big$$Mac"
@@ -93,7 +123,21 @@ puts "\n\nCustom Split: "
 
 #* Solution:
 def custom_split(text, delimiter)
+  result = []
 
+  segment = ""
+
+  text.each_char do |character|
+    if character == delimiter
+      result << segment unless segment.empty?
+      segment = ""
+    else
+      segment << character
+    end
+  end
+
+  result << segment unless segment.empty?
+  result
 end
 
 p custom_split("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
@@ -116,7 +160,17 @@ puts "\n\nThe Split Method: "
 
 #* Solution:
 def longest_word(strings)
+  words = strings.split(" ")
 
+  longest_word = words[0]
+
+  words.each do |word|
+    if word.length >= longest_word.length
+      longest_word = word
+    end
+  end
+
+  longest_word
 end
 
 p longest_word("Bobby loves very big scary kangaroos too") # => "kangaroos"

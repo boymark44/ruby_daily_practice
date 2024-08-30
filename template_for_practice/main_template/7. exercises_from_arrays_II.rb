@@ -42,9 +42,9 @@ puts
 puts
 
 
-#* Using the select and reject methods at the same time:
+#* Instruction: Reject those animals whose name have letters "c" on them.
+#* Solution: Use the reject and include? method. Use it on the p method directly.
 animals = %w[cheetah cat lion elephant dog cow]
-
 
 
 

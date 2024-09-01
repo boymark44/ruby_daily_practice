@@ -25,3 +25,10 @@
 - Currently in 5 until 8. 
 - Grind your way up dude.
 - Finished the 7 and 8 tonight. 
+
+
+## Day 5 of Coding in Ruby
+- Finished the Exercises 1 and 2. 
+- Tomorrow again is another day. Hope that I can grind. 
+- Help me Lord to retain all the knowledge and use them accordingly. 
+- Do not allow frustrations to demoralize me. Help me to progress and improve my programming skills. 

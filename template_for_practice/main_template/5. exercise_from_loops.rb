@@ -1,13 +1,13 @@
 #* Exercise 1: While Loop.
 puts "\nWhile Loop: "
 
-# Implement a simple while loop that counts from 1 to 10:
+#* Implement a simple while loop that counts from 1 to 10:
 
 
 puts
 
 
-# Implement a simple while loop that appends the character "a" for every iteration:
+#* Implement a simple while loop that appends the character "a" for every iteration. Do it in 5 iterations.
 
 
 

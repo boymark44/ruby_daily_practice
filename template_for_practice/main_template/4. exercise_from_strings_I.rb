@@ -93,7 +93,7 @@ puts "\n\nString Length and Comparison: "
 # The method should return a Boolean that reflects whether
 # the string has more than 7 characters.
 
-#* Solution: Kind of a lengthy approach.
+#* Solution: Kind of a lengthy approach. Get the length of the string and assign to a variable.
 def long_word(string)
 
 end

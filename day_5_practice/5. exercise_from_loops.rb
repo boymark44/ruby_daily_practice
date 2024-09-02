@@ -35,15 +35,34 @@ money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the even
 current_index = 0
 final_index = money_sentence.length - 1
 
-while current_index <= final_index
-  puts "Dollars is found at #{current_index}" ? money_sentence[current_index] == "$" : current_index += 1
+while current_index < final_index
+  if money_sentence[current_index] == "$"
+    puts "Dollars is found at #{current_index}!"
+  end
+
+  current_index += 1
 end
 
 puts
 
 
 #* Solution: Using the next keyword.
+# Iterate through each character of the string and return the index position in which the "$" is found
+money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
+current_index = 0
+final_index = money_sentence.length - 1
+
+while current_index < final_index
+  if money_sentence[current_index] != "$"
+    current_index += 1
+    next
+  else
+    puts "Dollars is found at #{current_index}!"
+    current_index += 1
+  end
+
+end
 
 
 

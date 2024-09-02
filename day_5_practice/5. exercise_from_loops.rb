@@ -2,13 +2,25 @@
 puts "\nWhile Loop: "
 
 # Implement a simple while loop that counts from 1 to 10:
+count = 1
 
+while count <= 10
+  puts count
 
+  count += 1
+end
+puts
+puts 10
 puts
 
 
 # Implement a simple while loop that appends the character "a" for every iteration:
+result = ""
+while result.length < 5
+  puts result
 
+  result << "a"
+end
 
 
 
@@ -20,7 +32,12 @@ money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the even
 
 
 #* Solution: Without using the next keyword.
+current_index = 0
+final_index = money_sentence.length - 1
 
+while current_index <= final_index
+  puts "Dollars is found at #{current_index}" ? money_sentence[current_index] == "$" : current_index += 1
+end
 
 puts
 

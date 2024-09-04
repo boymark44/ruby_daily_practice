@@ -7,20 +7,24 @@ birds = %w[eagle sparrow pigeon hawk penguin]
 
 
 #* Solution: Using the regular convention(use the .each method to iterate):
+bird_cage = []
 
-
-
+birds.each do |bird|
+  bird_cage << bird.length
+end
+p bird_cage # => [5, 7, 6, 4, 7]
 puts
 
 
 #* Using the map method:
-
-
-
+bird_cage = birds.map { |bird| bird.length }
+p bird_cage # => [5, 7, 6, 4, 7]
 puts
 
 
 #* Using the collect method:
+bird_cage = birds.collect { |bird| bird.length }
+p bird_cage # => [5, 7, 6, 4, 7]
 
 
 
@@ -31,20 +35,23 @@ words = %w[racecar selfless sentences level]
 
 
 #* Solution: Using the select method - select those words that are palindrome.
-
-
+palindromes = words.select { |word| word == word.reverse }
+p palindromes # => ["racecar", "level"]
 puts
 
 
 #* Solution: Using the reject method - reject those words that are not palindrome.
-
-
+palindromes = words.reject { |word| word == word.reverse }
+p palindromes # => ["selfless", "sentences"]
 puts
 
 
 #* Instruction: Reject those animals whose name have letters "c" on them.
 #* Solution: Use the reject and include? method. Use it on the p method directly.
 animals = %w[cheetah cat lion elephant dog cow]
+
+zoo = animals.reject { |animal| animal.include?("c") }
+p zoo # => ["lion", "elephant", "dog"]
 
 
 
@@ -78,9 +85,12 @@ words = %w[dictionary refrigerator platypus microwave]
 
 
 # Using find:
-
+found = words.find { |word| word.include?("e") }
+p found
 
 # Using detect:
+detected = words.detect { |word| word.include?("e") }
+p detected
 
 
 
@@ -99,7 +109,12 @@ puts "\n\nThe Unlimited Method Arguments: "
 # ```
 
 def adder(*numbers)
+  rolling_sum = 0
 
+  numbers.each { |num| rolling_sum += num }
+
+  p numbers
+  rolling_sum
 end
 
 
@@ -113,7 +128,12 @@ puts
 
 
 def adder(a, b, *numbers, c, d)
+  rolling_sum = 0
 
+  numbers.each { |num| rolling_sum += num  }
+
+  p numbers
+  rolling_sum
 end
 
 p adder(1, 2, 3, 4) # => [], 0

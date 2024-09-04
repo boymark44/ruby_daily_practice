@@ -62,7 +62,7 @@ puts "\n\nExtracting Multiple Array Elements: "
 def split_in_two(array)
   length = array.length
 
-  midpoint = (length / 2).round
+  midpoint = (length / 2.0).round
 
   first_half = array.first(midpoint)
   second_half = array.last(length - midpoint)

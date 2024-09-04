@@ -65,13 +65,17 @@ foods = %w[Steak Vegetables Steak-Burger Kale Tofu Tuna-Steaks]
 
 
 #* Solution: Using both the select and reject methods to accomplish the goal of partitioning:
-
-
+good_foods = foods.select { |food| food.include?("Steak") }
+bad_foods = foods.reject { |food| food.include?("Steak") }
+p good_foods # => ["Steak", "Steak-Burger", "Tuna-Steaks"]
+p bad_foods # => ["Vegetables", "Kale", "Tofu"]
 puts
 
 
 #* Solution: Using the partition method to automatically partition the good_foods from the bad_foods:
-
+good_foods, bad_foods = foods.partition { |food| food.include?("Steak") }
+p good_foods # => ["Steak", "Steak-Burger", "Tuna-Steaks"]
+p bad_foods # => ["Vegetables", "Kale", "Tofu"]
 
 
 
@@ -153,7 +157,7 @@ puts "\n\nCustom Max Method: "
 #* Solution: Using the built-in max method.
 def using_builtin_array(array)
   # Use the ternary operation and implicit returning:
-
+  array.length == 0 ? nil : array.max
 end
 
 p using_builtin_array([434.12, 723.99, 84.12, 649.92]) # => 723.99
@@ -166,8 +170,15 @@ puts
 #* Solution: Using a Custom Max approach:
 def custom_max(array)
   # Base Case:
+  return nil if array.empty?
 
+  largest_element = array[0]
 
+  array.each do |current_element|
+    largest_element = current_element if current_element > largest_element
+  end
+
+  largest_element
 end
 
 p custom_max([434.12, 723.99, 84.12, 649.92]) # => 723.99
@@ -187,7 +198,15 @@ puts "\n\nThe Each Method: "
 
 #* Solution:
 def double_elements(numbers_array)
+  result = []
 
+  numbers_array.each do |number|
+    multiples_of_two = number * 2
+
+    result << multiples_of_two
+  end
+
+  result
 end
 
 p double_elements([1, 2, 3, 4, 5]) # => [2, 4, 6, 8, 10]
@@ -201,7 +220,7 @@ puts
 
 #* Solution:
 def extract_long_words(string_array)
-
+  result = string_array.select { |string| string.length > 7 }
 end
 
 p extract_long_words(["spaghetti", "penne", "fettuccine", "ziti"]) # => ["spaghetti", "fettuccine"]
@@ -217,7 +236,15 @@ puts
 
 #* Solution:
 def pastas_and_sauces(pasta, sauce)
+  combinations = []
 
+  pasta.each do |pasta_type|
+    sauce.each do |sauce_type|
+      combinations.push("#{pasta_type.capitalize} with #{sauce_type.capitalize} sauce.")
+    end
+  end
+
+  combinations
 end
 
 p pastas_and_sauces(["fettucine", "spaghetti", "penne"], ["alfredo", "bolognese", "pesto"]) # => ["Fettucine with Alfredo sauce.", "Fettucine with Bolognese sauce.", "Fettucine with Pesto sauce.", "Spaghetti with Alfredo sauce.", "Spaghetti with Bolognese sauce.", "Spaghetti with Pesto sauce.", "Penne with Alfredo sauce.", "Penne with Bolognese sauce.", "Penne with Pesto sauce."]
@@ -246,7 +273,13 @@ puts
 #* Solution: A shorter approach.
 def product_of_number_and_index(numbers_array)
   # Implement the same operation using the each_with_index method only:
+  rolling_sum = 0
 
+  numbers_array.each_with_index do |element, index|
+    rolling_sum += element * index
+  end
+
+  rolling_sum
 end
 
 p product_of_number_and_index([1, 2, 3]) # => 8

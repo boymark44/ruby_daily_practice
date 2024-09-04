@@ -1,13 +1,13 @@
 #* Exercise 1: While Loop.
 puts "\nWhile Loop: "
 
-#* Implement a simple while loop that counts from 1 to 10:
+#* Solution: Implement a simple while loop that counts from 1 to 10:
 
 
 puts
 
 
-#* Implement a simple while loop that appends the character "a" for every iteration. Do it in 5 iterations.
+#* Solution: Implement a simple while loop that appends the character "a" for every iteration. Do it in 5 iterations.
 
 
 
@@ -36,7 +36,7 @@ puts "\n\nThe Break Keyword: "
 # Mission: Find the first iteration or existence of "$" from the given string and terminate the loop completely. Failure is not an option.
 money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
-# Solution:
+#* Solution:
 
 
 puts first_money_index # => 7
@@ -57,7 +57,7 @@ puts "\n\nRecursion: Factorial. "
 #*             2 * 1!
 #*              return 1 (Base case reached)
 
-# Solution:
+#* Solution:
 def factorial(num)
   # Set the base case:
 
@@ -85,7 +85,7 @@ puts "\n\nRecursion: Reversing a String. "
 # If true, then append the current character to the reversed_text container using the shovel operator and then decrement the last_index - 1.
 # After the loop is done, return the value of the reversed_text.
 
-# Solution:
+#* Solution:
 def reverse_string(string)
 
 end
@@ -101,7 +101,7 @@ puts
 # Set the value of the reversed_text to char + reversed_text
 # Once the iteration for every character is done, return the value of reversed_text.
 
-# Solution:
+#* Solution:
 def reverse_string(string)
 
 end
@@ -115,7 +115,7 @@ puts
 # Base Case: return string if string.length <= 1
 # Recursive Case: string[-1] + reverse_string(string[0...-1])
 
-# Solution:
+#* Solution:
 def reverse_string(string)
   # Base Case:
 

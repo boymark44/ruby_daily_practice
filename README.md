@@ -1,4 +1,8 @@
-## Main Title
+# Ruby Coding Journal. 
+
+
+
+## Day 1 of Coding in Ruby
 - Here lies all my tears and frustrations while coding using Ruby. 
 - This is your fault economy. 
 - Now I am jobless. 
@@ -32,3 +36,13 @@
 - Tomorrow again is another day. Hope that I can grind. 
 - Help me Lord to retain all the knowledge and use them accordingly. 
 - Do not allow frustrations to demoralize me. Help me to progress and improve my programming skills. 
+- Finally, I finished it tonight. 
+
+
+## Day 6 of Coding in Ruby 
+- Start again. 
+- Be consistent.
+- Be familiar with the syntax and semantics.
+- Figure out the complexity of logic later. 
+- Never get disheartened if the way you solved the program is not complex. That is just identity crisis. Keep going. 
+- So far. The Exercises 8 proves to be the most challenging so far. I want to learn it as soon as possible. Not just the memorization of writing it. I want to understand it. 

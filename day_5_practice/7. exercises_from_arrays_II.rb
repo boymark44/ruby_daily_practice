@@ -262,7 +262,17 @@ puts "\n\nThe Each with Index: "
 
 #* Solution:
 def product_of_number_and_index(numbers_array)
+  new_array = []
 
+  numbers_array.each_with_index do |number, index|
+    new_array << number * index
+  end
+
+  rolling_sum = 0
+
+  new_array.each { |element| rolling_sum += element }
+
+  rolling_sum
 end
 
 p product_of_number_and_index([1, 2, 3]) # => 8
@@ -296,7 +306,7 @@ puts "\n\nFiltering Methods: "
 #* Solution:
 def reverse_all(string_array)
   # Use the map method:
-
+  reversed = string_array.map { |string| string.reverse }
 end
 
 p reverse_all(["cat", "bat", "tub"]) # => ["tac", "tab", "but"]
@@ -311,7 +321,9 @@ puts
 #* Solution:
 def words_with_letter(string_array, letter)
   # Use the select method to select those strings that contains the included letter:
+  new_array = string_array.select { |string| string.include?(letter) }
 
+  new_array
 end
 
 p words_with_letter(["cat", "bat", "tub"], "a") # => ["cat", "bat"]
@@ -329,7 +341,9 @@ puts
 #* Solution:
 def evens_and_odds(numbers_array)
   # Use the partition method:
+  new_array = numbers_array.partition { |number| number.even? }
 
+  new_array
 end
 
 p evens_and_odds([1, 2, 3, 4, 5]) # => [[2, 4], [1, 3, 5]]
@@ -347,7 +361,13 @@ puts "\n\nUnlimited Method Arguments For Strings: "
 
 #* Solution:
 def sum_of_string_lengths(*strings)
+  rolling_sum = 0
 
+  strings.each do |string|
+    rolling_sum += string.length
+  end
+
+  rolling_sum
 end
 
 p sum_of_string_lengths("bob", "loves", "burgers") # => 15
@@ -366,7 +386,7 @@ puts "\n\nAny? and All?: "
 #* Solution:
 def has_greater_than_seven_characters(array)
   # Use the any? method:
-
+  array.any? { |element| element.length > 7 }
 end
 
 p has_greater_than_seven_characters(["ruby", "exercise", "cat"]) # => true
@@ -382,7 +402,7 @@ puts
 #* Solution:
 def against_all_odds(array)
   # Use the all? method:
-
+  array.all? { |element| element.even? }
 end
 
 p against_all_odds([3, 5, 7, 2]) # => false

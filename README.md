@@ -1,4 +1,4 @@
-# Ruby Coding Journal. 
+# Ruby Coding Journal. (Consistency over Intensity)
 
 
 

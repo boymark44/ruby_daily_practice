@@ -46,3 +46,7 @@
 - Figure out the complexity of logic later. 
 - Never get disheartened if the way you solved the program is not complex. That is just identity crisis. Keep going. 
 - So far. The Exercises 8 proves to be the most challenging so far. I want to learn it as soon as possible. Not just the memorization of writing it. I want to understand it. 
+- Dammit. I messed up on Exercises 4 and 5. I forgot how the next keyword works as well as the FizzBuzz problem. I have solved this problem already.
+- I am still dealing with imposter syndrome. But, I will not give up yet. I will enjoy the process myself until I am confident how to become proficient. 
+- Consistency > Intensity. 
+- Overall, I struggled with Exercises 4, 5, 6, 7, and 8. But I will not lose hope and I promise I will solve them. 

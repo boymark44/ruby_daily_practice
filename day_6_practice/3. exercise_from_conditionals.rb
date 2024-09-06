@@ -105,7 +105,7 @@ puts "\n\nMultiple Conditions: "
 
 #* Solution:
 def divisible_by_three_and_four(num)
-
+  num % 3 == 0 and num % 4 == 0 ? true : false
 end
 
 puts divisible_by_three_and_four(3) # => false
@@ -122,7 +122,7 @@ puts
 
 #* Solution:
 def string_theory(string)
-
+  string.length > 4 or string.include?("B")
 end
 
 puts string_theory("Big Mac") # => true
@@ -142,7 +142,7 @@ puts "\n\nIf-Statements: "
 
 #* Solution:
 def even_or_odd_operations(integer)
-
+  integer.even? ? integer + 2 : integer - 3
 end
 
 puts even_or_odd_operations(2) # => 4
@@ -162,7 +162,13 @@ puts "\n\nIf-Elsif-Else Statements: "
 
 #* Solution:
 def numeric_energy(number)
-
+  if number > 0
+    "Positive"
+  elsif number < 0
+    "Negative"
+  else
+    "Zero Hero"
+  end
 end
 
 puts numeric_energy(5) # => Positive
@@ -175,7 +181,11 @@ puts
 
 #* Solution: Solving Numeric Energy using "case method" for better readability.
 def numeric_energy(number)
-
+  case
+  when number.positive? then "Positive"
+  when number.negative? then "Negative"
+  else "Zero Hero"
+  end
 end
 
 puts numeric_energy(5) # => Positive

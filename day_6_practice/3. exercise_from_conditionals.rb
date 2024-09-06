@@ -19,13 +19,29 @@ def div(a, b)
 end
 
 def custom_calculator(a, b, operation)
-
+  if operation == "add"
+    add(a, b)
+  elsif operation == "subtract"
+    sub(a, b)
+  elsif operation == "multiply"
+    mul(a, b)
+  elsif operation == "divide"
+    if b != 0
+      div(a, b)
+    else
+      "Zero Division Error"
+    end
+  else
+    "Invalid Operation"
+  end
 end
 
 puts custom_calculator(3, 5, "add") # => 8
 puts custom_calculator(2, 5, "subtract") # => -13
 puts custom_calculator(3, 5, "multiply") # => 15
 puts custom_calculator(20, 4, "divide") # => 5
+puts custom_calculator(16, 0, "divide") # => 5
+puts custom_calculator(16, 0, "cannot be") # => 5
 puts
 
 
@@ -36,24 +52,45 @@ puts
 #* Solution: Use the "case" operation.
 def custom_calculator2(a, b, operation)
 
+  case operation
+  when :add then add(a, b)
+  when :subtract then sub(a, b)
+  when :multiply then mul(a, b)
+  when :divide
+    b.zero? ? "Zero Division Error" : div(a, b)
+  else
+    "Invalid Operation"
+  end
 end
 
 puts custom_calculator2(3, 5, :add) # => 8
 puts custom_calculator2(2, 5, :subtract) # => -13
 puts custom_calculator2(3, 5, :multiply) # => 15
 puts custom_calculator2(20, 4, :divide) # => 5
+puts custom_calculator2(16, 0, :divide) # => "Zero Division Error"
+puts custom_calculator2(24, 56, :cannot_be) # => "Invalid Operation"
 puts
 
 
 #* Solution: Utilize the guard clauses to handle edge cases early or validation process then subsequently do the actual calculation via "case" operation.
 def custom_calculator3(a, b, operation)
+  return "Invalid Operation" unless ["add", "subtract", "multiply", "divide"].include?(operation)
+  return "Zero Division Error" if operation == "divide" and b.zero?
 
+  case operation
+  when "add" then add(a, b)
+  when "subtract" then sub(a, b)
+  when "multiply" then mul(a, b)
+  when "divide" then div(a, b)
+  end
 end
 
 puts custom_calculator3(3, 5, "add") # => 8
 puts custom_calculator3(2, 5, "subtract") # => -13
 puts custom_calculator3(3, 5, "multiply") # => 15
 puts custom_calculator3(20, 4, "divide") # => 5
+puts custom_calculator3(16, 0, "divide") # => "Zero Division Error"
+puts custom_calculator3(24, 56, "cannot_be") # => "Invalid Operation"
 puts
 
 

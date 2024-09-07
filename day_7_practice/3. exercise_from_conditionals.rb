@@ -21,6 +21,22 @@ end
 #* Solution: Use the if-elsif-else statements.
 def custom_calculator(a, b, operation)
 
+  if operation == "add"
+    add(a, b)
+  elsif operation == "subtract"
+    sub(a, b)
+  elsif operation == "multiply"
+    mul(a, b)
+  elsif operation == "divide"
+    if b.zero?
+      "Zero Division Error"
+    else
+      div(a, b)
+    end
+  else
+    "Invalid Operation"
+  end
+
 end
 
 puts custom_calculator(3, 5, "add") # => 8
@@ -39,6 +55,14 @@ puts
 #* Solution: Use the "case" operation.
 def custom_calculator2(a, b, operation)
 
+  case operation
+  when :add then add(a, b)
+  when :subtract then sub(a, b)
+  when :multiply then mul(a, b)
+  when :divide then b.zero? ? "Zero Division Error" : div(a, b)
+  else "Invalid Operation"
+  end
+
 end
 
 puts custom_calculator2(3, 5, :add) # => 8
@@ -52,6 +76,16 @@ puts
 
 #* Solution: Utilize the guard clauses to handle edge cases early or validation process then subsequently do the actual calculation via "case" operation.
 def custom_calculator3(a, b, operation)
+
+  return "Invalid Operation" unless ["add", "subtract", "multiply", "divide"].include?(operation)
+  return "Zero Division Error" if b.zero? and operation == "divide"
+
+  case operation
+  when "add" then add(a, b)
+  when "subtract" then sub(a, b)
+  when "multiply" then mul(a, b)
+  when "divide" then div(a, b)
+  end
 
 end
 
@@ -75,7 +109,7 @@ puts "\n\nMultiple Conditions: "
 
 #* Solution:
 def divisible_by_three_and_four(num)
-
+  num % 3 == 0 and num % 4 == 0
 end
 
 puts divisible_by_three_and_four(3) # => false
@@ -92,7 +126,7 @@ puts
 
 #* Solution:
 def string_theory(string)
-
+  string.length > 4 or string.include?("B")
 end
 
 puts string_theory("Big Mac") # => true
@@ -112,7 +146,7 @@ puts "\n\nIf-Statements: "
 
 #* Solution:
 def even_or_odd_operations(integer)
-
+  integer.even? ? integer + 2 : integer - 3
 end
 
 puts even_or_odd_operations(2) # => 4
@@ -132,7 +166,13 @@ puts "\n\nIf-Elsif-Else Statements: "
 
 #* Solution:
 def numeric_energy(number)
-
+  if number > 0
+    "Positive"
+  elsif number < 0
+    "Negative"
+  else
+    "Zero Hero"
+  end
 end
 
 puts numeric_energy(5) # => Positive
@@ -145,7 +185,11 @@ puts
 
 #* Solution: Solving Numeric Energy using "case method" for better readability.
 def numeric_energy(number)
-
+  case
+  when number.positive? then "Positive"
+  when number.negative? then "Negative"
+  else "Zero Hero"
+  end
 end
 
 puts numeric_energy(5) # => Positive

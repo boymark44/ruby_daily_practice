@@ -50,3 +50,8 @@
 - I am still dealing with imposter syndrome. But, I will not give up yet. I will enjoy the process myself until I am confident how to become proficient. 
 - Consistency > Intensity. 
 - Overall, I struggled with Exercises 4, 5, 6, 7, and 8. But I will not lose hope and I promise I will solve them. 
+
+
+## Day 7 of Coding in Ruby
+- Finished until Exercise 4. 
+- Ongoing.....

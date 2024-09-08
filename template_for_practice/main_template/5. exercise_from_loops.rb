@@ -26,6 +26,8 @@ puts
 
 
 #* Solution: Using the next keyword.
+# Iterate through each character of the string and return the index position in which the "$" is found
+money_sentence = "I love $ in the morning, $ in the afternoon, and $ in the evening."
 
 
 

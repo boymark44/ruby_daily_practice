@@ -55,3 +55,8 @@
 ## Day 7 of Coding in Ruby
 - Finished until Exercise 4. 
 - Ongoing.....
+- It took me a long time to solve again the custom max. It is so frustrating because I already solved this problem many times yet I forgot dammit.
+- It is so frustrating. I get it but I will not give up. I will continue until I can familiar with this problem and solve it without looking at my codigo.
+- Finally I finished. Pew. 
+- Only the Exercise 7 and 8 proves to be the most difficult for me to solve. 
+- I will practice again. 

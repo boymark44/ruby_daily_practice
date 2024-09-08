@@ -130,9 +130,8 @@ puts "\n\nCustom Max Method: "
 # If the array is empty, the method should return nil.
 # Do not use the max method in your solution!
 
-#* Solution: Using the built-in max method.
+#* Solution: Use the max method in a ternary statement.
 def using_builtin_array(array)
-  # Use the ternary operation and implicit returning:
 
 end
 
@@ -213,7 +212,7 @@ puts "\n\nThe Each with Index: "
 # then add that product to a rolling sum. Return the final sum.
 # If the array has no elements, the final sum should be 0.
 
-#* Solution:
+#* Solution: Define a variable that would hold the elements multiplied 2.
 def product_of_number_and_index(numbers_array)
 
 end
@@ -223,9 +222,9 @@ p product_of_number_and_index([]) # => 0
 puts
 
 
-#* Solution: A shorter approach.
+#* Solution: Using the each_with_index method only.
 def product_of_number_and_index(numbers_array)
-  # Implement the same operation using the each_with_index method only:
+
 
 end
 
@@ -240,9 +239,9 @@ puts "\n\nFiltering Methods: "
 # Define a reverse_all method that accepts an array of strings.
 # The method should return an array with all the strings in reversed order.
 
-#* Solution:
+#* Solution: Use the map or collect methods.
 def reverse_all(string_array)
-  # Use the map method:
+
 
 end
 
@@ -255,9 +254,9 @@ puts
 # Define a words_with_letter method that accepts an array of strings and a letter.
 # The method should return an array of the strings that include the letter.
 
-#* Solution:
+#* Solution: Use select method.
 def words_with_letter(string_array, letter)
-  # Use the select method to select those strings that contains the included letter:
+
 
 end
 
@@ -273,9 +272,9 @@ puts
 # The second array should contain the odd numbers.
 # Return an array consisting of the two arrays.
 
-#* Solution:
+#* Solution: Use the partition method.
 def evens_and_odds(numbers_array)
-  # Use the partition method:
+
 
 end
 
@@ -310,9 +309,9 @@ puts "\n\nAny? and All?: "
 # accepts an array of strings. It should return a Boolean reflecting
 # whether any array element has more than 7 characters.
 
-#* Solution:
+#* Solution: Use the any? method.
 def has_greater_than_seven_characters(array)
-  # Use the any? method:
+
 
 end
 
@@ -326,9 +325,9 @@ puts
 # It should return a Boolean reflecting whether all array elements
 # are even.
 
-#* Solution:
+#* Solution: Use the all? method.
 def against_all_odds(array)
-  # Use the all? method:
+
 
 end
 

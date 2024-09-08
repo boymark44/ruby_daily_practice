@@ -7,16 +7,42 @@ puts "Custom Count: "
 # search characters appear in the original string. Do not use the
 # built-in count method in your solution.
 
-#* Solution:
-def custom_count(strings, search_character)
+#* Solution: Solve using the built-in count method.
+def custom_count1(strings, search_character)
 
 end
 
-p custom_count("Hello World", "l") # => 3
-p custom_count("Hello World", "O") # => 0
-p custom_count("Hello World", "z") # => 0
-p custom_count("Hello World", "lo") # => 5
-p custom_count("Hello World", "ol") # => 5
+p custom_count1("Hello World", "l") # => 3
+p custom_count1("Hello World", "O") # => 0
+p custom_count1("Hello World", "z") # => 0
+p custom_count1("Hello World", "lo") # => 5
+p custom_count1("Hello World", "ol") # => 5
+
+puts
+
+
+#* Solution: Solve using the custom approach.
+def custom_count2(strings, search_character)
+
+end
+
+p custom_count2("Hello World", "l") # => 3
+p custom_count2("Hello World", "O") # => 0
+p custom_count2("Hello World", "z") # => 0
+p custom_count2("Hello World", "lo") # => 5
+p custom_count2("Hello World", "ol") # => 5
+
+
+#* Solution: Solve again.
+def custom_count3(strings, search_character)
+
+end
+
+p custom_count3("Hello World", "l") # => 3
+p custom_count3("Hello World", "O") # => 0
+p custom_count3("Hello World", "z") # => 0
+p custom_count3("Hello World", "lo") # => 5
+p custom_count3("Hello World", "ol") # => 5
 
 
 
@@ -29,15 +55,37 @@ puts "\n\nCustom Delete: "
 # among the deletion characters. Do not use the built-in
 # delete method in your solution.
 
-#* Solution:
-def custom_delete(string, deletion_characters)
+#* Solution: Solve using the built-in delete method.
+def custom_delete1(string, deletion_characters)
 
 end
 
-p custom_delete("cottage cheese", "c") # => "ottage heese"
-p custom_delete("cottage cheese", "e") # => "cottag chs"
-p custom_delete("cottage cheese", "ce") # => "ottag hs"
-p custom_delete("cottage cheese", "ec") # => "ottag hs"
+p custom_delete1("cottage cheese", "c") # => "ottage heese"
+p custom_delete1("cottage cheese", "e") # => "cottag chs"
+p custom_delete1("cottage cheese", "ce") # => "ottag hs"
+p custom_delete1("cottage cheese", "ec") # => "ottag hs"
+
+
+#* Solution: Solve once.
+def custom_delete2(string, deletion_characters)
+
+end
+
+p custom_delete2("cottage cheese", "c") # => "ottage heese"
+p custom_delete2("cottage cheese", "e") # => "cottag chs"
+p custom_delete2("cottage cheese", "ce") # => "ottag hs"
+p custom_delete2("cottage cheese", "ec") # => "ottag hs"
+
+
+#* Solution: Solve it again
+def custom_delete3(string, deletion_characters)
+
+end
+
+p custom_delete3("cottage cheese", "c") # => "ottage heese"
+p custom_delete3("cottage cheese", "e") # => "cottag chs"
+p custom_delete3("cottage cheese", "ce") # => "ottag hs"
+p custom_delete3("cottage cheese", "ec") # => "ottag hs"
 
 
 
@@ -49,17 +97,40 @@ puts "\n\nCustom Index: "
 # search term within the string. If the search term does not exist,
 # return nil. Do not use the built-in index method in your solution.
 
-#* Solution:
-def custom_index(string, search_term)
+#* Solution: Solve using the built-in index method.
+def custom_index1(string, search_term)
 
 end
 
-p custom_index("I am very handsome", "I") # => 0
-p custom_index("I am very handsome", "e") # => 6
-p custom_index("I am very handsome", "Z") # => nil
-p custom_index("I am very handsome", "am") # => 2
-p custom_index("I am very handsome", "ma") # => nil
+p custom_index1("I am very handsome", "I") # => 0
+p custom_index1("I am very handsome", "e") # => 6
+p custom_index1("I am very handsome", "Z") # => nil
+p custom_index1("I am very handsome", "am") # => 2
+p custom_index1("I am very handsome", "ma") # => nil
 
+
+#* Solution: Solve once using the custom approach.
+def custom_index2(string, search_term)
+
+end
+
+p custom_index2("I am very handsome", "I") # => 0
+p custom_index2("I am very handsome", "e") # => 6
+p custom_index2("I am very handsome", "Z") # => nil
+p custom_index2("I am very handsome", "am") # => 2
+p custom_index2("I am very handsome", "ma") # => nil
+
+
+#* Solution: Solve again.
+def custom_index3(string, search_term)
+
+end
+
+p custom_index3("I am very handsome", "I") # => 0
+p custom_index3("I am very handsome", "e") # => 6
+p custom_index3("I am very handsome", "Z") # => nil
+p custom_index3("I am very handsome", "am") # => 2
+p custom_index3("I am very handsome", "ma") # => nil
 
 
 #* Exercise 15: Custom Join.
@@ -71,14 +142,34 @@ puts "\n\nCustom Join: "
 # in between every two subsequent elements. Do not use the
 # built-in join method in your solution.
 
-#* Solution:
-def custom_join(strings, delimiter)
+#* Solution: Solve using the built-in join method.
+def custom_join1(strings, delimiter)
 
 end
 
-p custom_join(["red", "green", "blue"], "!") # => "red!green!blue"
-p custom_join(["Big", "Mac"], "$$") # => "Big$$Mac"
-p custom_join([], "$$$") # => ""
+p custom_join1(["red", "green", "blue"], "!") # => "red!green!blue"
+p custom_join1(["Big", "Mac"], "$$") # => "Big$$Mac"
+p custom_join1([], "$$$") # => ""
+
+
+#* Solution: Solve using the custom approach.
+def custom_join2(strings, delimiter)
+
+end
+
+p custom_join2(["red", "green", "blue"], "!") # => "red!green!blue"
+p custom_join2(["Big", "Mac"], "$$") # => "Big$$Mac"
+p custom_join2([], "$$$") # => ""
+
+
+#* Solution: Solve again.
+def custom_join3(strings, delimiter)
+
+end
+
+p custom_join3(["red", "green", "blue"], "!") # => "red!green!blue"
+p custom_join3(["Big", "Mac"], "$$") # => "Big$$Mac"
+p custom_join3([], "$$$") # => ""
 
 
 
@@ -91,15 +182,37 @@ puts "\n\nCustom Split: "
 # use the built-in split method on a string. Assume that the delimiter
 # will never be an empty string.
 
-#* Solution:
-def custom_split(text, delimiter)
+#* Solution: Solve using the built-in split method.
+def custom_split1(text, delimiter)
 
 end
 
-p custom_split("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
-p custom_split("ravioli is delicious", "i") # => ["rav", "ol", " ", "s del", "c", "ous"]
-p custom_split("Zebra", "j") # => ["Zebra"]
-p custom_split(" hello", " ") # => ["hello"]
+p custom_split1("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
+p custom_split1("ravioli is delicious", "i") # => ["rav", "ol", " ", "s del", "c", "ous"]
+p custom_split1("Zebra", "j") # => ["Zebra"]
+p custom_split1(" hello", " ") # => ["hello"]
+
+
+#* Solution: Solve using the custom approach.
+def custom_split2(text, delimiter)
+
+end
+
+p custom_split2("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
+p custom_split2("ravioli is delicious", "i") # => ["rav", "ol", " ", "s del", "c", "ous"]
+p custom_split2("Zebra", "j") # => ["Zebra"]
+p custom_split2(" hello", " ") # => ["hello"]
+
+
+#* Solution: Solve again.
+def custom_split3(text, delimiter)
+
+end
+
+p custom_split3("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
+p custom_split3("ravioli is delicious", "i") # => ["rav", "ol", " ", "s del", "c", "ous"]
+p custom_split3("Zebra", "j") # => ["Zebra"]
+p custom_split3(" hello", " ") # => ["hello"]
 
 
 
@@ -114,11 +227,31 @@ puts "\n\nThe Split Method: "
 #  - Every two words are separated by a single space
 #  - The string does not contain any symbols or characters
 
-#* Solution:
-def longest_word(strings)
+#* Solution: Solve once.
+def longest_word1(strings)
 
 end
 
-p longest_word("Bobby loves very big scary kangaroos too") # => "kangaroos"
-p longest_word("Ruby is my favorite language") # => "language"
-p longest_word("Hello") # => "Hello"
+p longest_word1("Bobby loves very big scary kangaroos too") # => "kangaroos"
+p longest_word1("Ruby is my favorite language") # => "language"
+p longest_word1("Hello") # => "Hello"
+
+
+#* Solution: Solve twice.
+def longest_word2(strings)
+
+end
+
+p longest_word2("Bobby loves very big scary kangaroos too") # => "kangaroos"
+p longest_word2("Ruby is my favorite language") # => "language"
+p longest_word2("Hello") # => "Hello"
+
+
+#* Solution: Solve again.
+def longest_word3(strings)
+
+end
+
+p longest_word3("Bobby loves very big scary kangaroos too") # => "kangaroos"
+p longest_word3("Ruby is my favorite language") # => "language"
+p longest_word3("Hello") # => "Hello"

@@ -65,3 +65,7 @@
 ## Day 8 of Coding in Ruby 
 - Starting the Day 8. 
 - Finished until Exerise 4. 
+- I got stumbled on Exercise 8 - Custom Join again. 
+- I have most questions on Exercise 8. I will carefully look at their whys.
+- Damn, I cannot help but look for help again for Exercise 8.
+- Patience is a virtue. I will not give up until I can get the answers. 

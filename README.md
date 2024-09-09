@@ -69,3 +69,4 @@
 - I have most questions on Exercise 8. I will carefully look at their whys.
 - Damn, I cannot help but look for help again for Exercise 8.
 - Patience is a virtue. I will not give up until I can get the answers. 
+- Finished at last. But I will not give up and I will continue until I perfected it. 

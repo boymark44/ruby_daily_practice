@@ -144,7 +144,6 @@ puts
 
 #* Solution: Using a Custom Max approach:
 def custom_max(array)
-  # Base Case:
 
 
 end

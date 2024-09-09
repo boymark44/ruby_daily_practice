@@ -60,3 +60,8 @@
 - Finally I finished. Pew. 
 - Only the Exercise 7 and 8 proves to be the most difficult for me to solve. 
 - I will practice again. 
+
+
+## Day 8 of Coding in Ruby 
+- Starting the Day 8. 
+- Finished until Exerise 4. 

@@ -1,9 +1,8 @@
 #* Exercise 1: Declare two methods that implements how a block works in Ruby.
 puts "\nImplement a block: "
 
-#* Solution: Do it with no parameters involve.
+#* Solution: Print "Hello" 5 times.
 def print_five_times
-  # Print "Hello" 5 times using the times method:
 
 end
 
@@ -11,9 +10,8 @@ print_five_times # => HelloHelloHelloHelloHello
 puts
 
 
-#* Solution: Do it atleast with 1 parameter and call it "num":
+#* Solution: Use the "num" as the number of times "Money" should be printed:
 def money_printer(num)
-  # Use the times method n times:
 
 end
 
@@ -32,7 +30,6 @@ p # => "0246810"
 
 #* Solution: Use .step method to print even elements in a single-line block.
 def increments_of_two
-  # The step(upper-bound, no. of intervals)
 
 end
 
@@ -57,9 +54,9 @@ end
 puts increments_of_two # => 0246810
 
 
-#* Solution from Boris:
+#* Solution from Boris: Use the times method 6-times.
 def increments_of_two
-  # Use the times method 6 times and multipy them by 2 for every iteration in a single-line block:
+
 
 end
 

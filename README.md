@@ -70,3 +70,8 @@
 - Damn, I cannot help but look for help again for Exercise 8.
 - Patience is a virtue. I will not give up until I can get the answers. 
 - Finished at last. But I will not give up and I will continue until I perfected it. 
+
+
+## Day 9 of Coding in Ruby
+- Started the Day 9 Ruby Coding exercises.
+- I hope that I can finish this immediately.

@@ -61,11 +61,8 @@ puts "\n\nRecursion: Factorial. "
 
 #* Solution:
 def factorial(num)
-  # Set the base case:
 
 
-
-  # Recursive case:
 
 end
 
@@ -119,10 +116,8 @@ puts
 
 #* Solution:
 def reverse_string(string)
-  # Base Case:
 
 
-  # Recursive Case:
 
 end
 

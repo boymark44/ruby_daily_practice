@@ -6,9 +6,10 @@ puts "\nString Index Position: "
 # and false otherwise.
 # Assume the string will always have 1 or more characters.
 
-#* Solution:
+#* Solution: Using the Bracket Syntax.
 def same_first_and_last_letter(string)
-  # Use bracket syntax to compare the first and last index of the string:
+
+
 
 end
 
@@ -24,9 +25,9 @@ puts
 # HINT: You’ll have to figure out a way to convert the
 # string-ified digits to integers.
 
-#* Solution:
+#* Solution: Extract elements from index: 0, 1, and 2 then convert them into integers.
 def three_number_sum(numbers)
-  # Access the index: 0, 1, and 2 then convert them into integers:
+
 
 end
 

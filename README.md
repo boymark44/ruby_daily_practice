@@ -75,3 +75,6 @@
 ## Day 9 of Coding in Ruby
 - Started the Day 9 Ruby Coding exercises.
 - I hope that I can finish this immediately.
+- Finished the Day 9 Exercises without relying on the cheatsheet. 
+- I hope that I can do well next time.
+- Now, unto the Ruby Interview Questions. 

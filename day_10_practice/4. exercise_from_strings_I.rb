@@ -6,11 +6,9 @@ puts "\nString Index Position: "
 # and false otherwise.
 # Assume the string will always have 1 or more characters.
 
-#* Solution: Using the Bracket Syntax.
+#* Solution:
 def same_first_and_last_letter(string)
-
   string[0] == string[-1]
-
 end
 
 puts same_first_and_last_letter("runner") # => true

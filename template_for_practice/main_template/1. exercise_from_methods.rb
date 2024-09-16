@@ -12,9 +12,8 @@ puts calculate_meal_cost(100) # => $120.0
 puts
 
 
-#* Solution:
+#* Solution: String Interpolation
 def string_adder(a = "", b = "")
-  # Interpolate a and b:
 
 end
 

@@ -8,9 +8,7 @@ puts "\nString Index Position: "
 
 #* Solution: Using the Bracket Syntax.
 def same_first_and_last_letter(string)
-
-
-
+  string[0] == string[-1]
 end
 
 puts same_first_and_last_letter("runner") # => true
@@ -27,8 +25,7 @@ puts
 
 #* Solution: Extract elements from index: 0, 1, and 2 then convert them into integers.
 def three_number_sum(numbers)
-
-
+  numbers[0].to_i + numbers[1].to_i + numbers[2].to_i
 end
 
 puts three_number_sum("123") # => 6
@@ -46,7 +43,7 @@ puts "\n\nString Slicing: "
 
 #* Solution: Using bracket syntax.
 def first_three_characters(string)
-
+  string[0...3]
 end
 
 puts first_three_characters("dynasty") # => dyn
@@ -57,6 +54,11 @@ puts
 #* Solution: Using the each_char method.
 def first_three_characters2(string)
 
+  first_three_char = ""
+
+  string.each_char { |current_character| first_three_char << current_character unless first_three_char.length == 3 }
+
+  first_three_char
 end
 
 puts first_three_characters2("dynasty") # => dyn
@@ -69,7 +71,7 @@ puts
 
 #* Solution: Using a bracket syntax.
 def five_from_the_end(string)
-
+  string[-5, 5]
 end
 
 puts five_from_the_end("dynasty") # => nasty
@@ -79,7 +81,7 @@ puts
 
 # Using the slice method:
 def five_from_the_end(string)
-
+  string.slice(-5, 5)
 end
 
 puts five_from_the_end("dynasty") # => nasty
@@ -96,7 +98,7 @@ puts "\n\nString Length and Comparison: "
 
 #* Solution:
 def long_word1(string)
-
+  string.length > 7
 end
 
 puts long_word1("Ruby") # => false
@@ -110,7 +112,7 @@ puts
 
 #* Solution:
 def first_longer_than_second(string1, string2)
-
+  string1.length > string2.length
 end
 
 puts first_longer_than_second("Python", "Ruby") # => true

@@ -451,16 +451,16 @@ p word.capitalize # => "Spaghetti"
 p word # => "spaghetti"
 
 word.upcase!
-p word # => "spaghetti"
+p word # => "SPAGHETTI"
 
 word.downcase!
-p word # => "S"
+p word # => "spaghetti"
 
 word.swapcase!
-p word # =>
+p word # => "SPAGHETTI"
 
 word.capitalize!
-p word # =>
+p word # => "Spaghetti"
 
 word.reverse!
-p word # =>
+p word # => "ittehgapS"

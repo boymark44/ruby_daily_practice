@@ -10,3 +10,9 @@ age = gets.chomp
 
 puts "Name: #{name}."
 puts "Age: #{age}."
+
+
+print "Doing all right? "
+response = gets.chomp
+
+puts "That's amazing. Keep it up!!!"

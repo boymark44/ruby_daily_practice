@@ -8,7 +8,7 @@ puts "Array Indexing: "
 
 #* First and last elements:
 def first_and_last(string_array)
-
+  string_array[0] + string_array[-1]
 end
 
 p first_and_last(["a", "b", "c"]) # => "ac"
@@ -25,6 +25,13 @@ puts
 #* Product of even indices:
 def product_of_even_indices(integer_array)
 
+  rolling_product = 1
+
+  integer_array.each_with_index do |current_element, current_index|
+    rolling_product *= current_element unless current_index.odd?
+  end
+
+  rolling_product
 end
 
 p product_of_even_indices([1, 2, 3, 4, 5, 6]) # => 15
@@ -40,7 +47,7 @@ puts
 #* First letter of last string:
 def first_letter_of_last_string(string_array)
   # Using the 2D indexing:
-
+  string_array[-1][0]
 end
 
 p first_letter_of_last_string(["cat", "dog", "zebra"]) # => "z"
@@ -61,6 +68,13 @@ puts "\n\nExtracting Multiple Array Elements: "
 # Split in two:
 def split_in_two(array)
 
+  array_length = array.length
+  midpoint = (array_length / 2.0).round
+
+  first_half = array.first(midpoint)
+  second_half = array.last(array_length - midpoint)
+
+  [first_half, second_half]
 end
 
 p split_in_two(["A", "B"]) # => [["A"], ["B"]]

@@ -35,6 +35,21 @@ puts
 # Solution suggested by Cody AI which is to use symbols instead of strings for operation names in the
 # custom_calculator method. This can improve performance and reduce the risk of typos:
 # Symbols are strings that you prepend a colon ":" instead of enclosing them with quotes.
+def add(a, b)
+  a + b
+end
+
+def sub(a, b)
+  a - b
+end
+
+def mul(a, b)
+  a * b
+end
+
+def div(a, b)
+  a / b
+end
 
 #* Solution: Use the "case" operation.
 def custom_calculator2(a, b, operation)
@@ -51,6 +66,22 @@ puts
 
 
 #* Solution: Utilize the guard clauses to handle edge cases early or validation process then subsequently do the actual calculation via "case" operation.
+def add(a, b)
+  a + b
+end
+
+def sub(a, b)
+  a - b
+end
+
+def mul(a, b)
+  a * b
+end
+
+def div(a, b)
+  a / b
+end
+
 def custom_calculator3(a, b, operation)
 
 end

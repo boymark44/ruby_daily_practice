@@ -3,7 +3,7 @@ puts "\nImplement a block: "
 
 #* Solution: Print "Hello" 5 times.
 def print_five_times
-
+    5.times { print "Hello" }
 end
 
 print_five_times # => HelloHelloHelloHelloHello
@@ -12,7 +12,7 @@ puts
 
 #* Solution: Use the "num" as the number of times "Money" should be printed:
 def money_printer(num)
-
+    num.times { print "Money" }
 end
 
 money_printer(3) # => MoneyMoneyMoney

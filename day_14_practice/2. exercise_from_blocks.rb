@@ -30,7 +30,7 @@ p (0..10).step(2).to_a.join # => "0246810"
 
 #* Solution: Use .step method to print even elements in a single-line block.
 def increments_of_two
-    (0..10).step(2) { |num| print num }
+    0.step(10, 2) { |num| print num }
 end
 
 increments_of_two # => 0246810
@@ -48,7 +48,12 @@ puts
 
 #* Solution: Using an empty string to print the even elements.
 def increments_of_two
-        
+    
+    result_string = ""
+    
+    0.upto(10) { |num| result_string << num.to_s if num % 2 == 0 }
+
+    result_string.to_i
 end
 
 puts increments_of_two # => 0246810
@@ -56,8 +61,7 @@ puts increments_of_two # => 0246810
 
 #* Solution from Boris: Use the times method 6-times.
 def increments_of_two
-
-
+    6.times { |num| print num * 2 }
 end
 
-increments_of_two # => 0246810
+increments_of_two.inspect # => 0246810

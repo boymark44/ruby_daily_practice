@@ -9,10 +9,9 @@ while count <= 10
 
   count += 1
 end
-asd
 puts
 
-as
+
 #* Solution: Implement a simple while loop that appends the character "a" for every iteration. Do it in 5 iterations.
 
 result_string = ""

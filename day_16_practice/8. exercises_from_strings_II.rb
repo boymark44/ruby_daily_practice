@@ -9,7 +9,7 @@ puts "Custom Count: "
 
 #* Solution: Solve using the built-in count method.
 def custom_count1(strings, search_character)
-
+    strings.count(search_character)
 end
 
 p custom_count1("Hello World", "l") # => 3
@@ -23,7 +23,11 @@ puts
 
 #* Solution: Solve using the custom approach.
 def custom_count2(strings, search_character)
+    count = 0 
 
+    strings.each_char { |current_char| count += 1 if search_character.include?(current_char) }
+
+    count
 end
 
 p custom_count2("Hello World", "l") # => 3
@@ -35,7 +39,13 @@ p custom_count2("Hello World", "ol") # => 5
 
 #* Solution: Solve again.
 def custom_count3(strings, search_character)
+    count = 0 
 
+    strings.each_char do |current_char|
+        count += 1 if search_character.include?(current_char)
+    end
+
+    count
 end
 
 p custom_count3("Hello World", "l") # => 3
@@ -57,7 +67,7 @@ puts "\n\nCustom Delete: "
 
 #* Solution: Solve using the built-in delete method.
 def custom_delete1(string, deletion_characters)
-
+    string.delete(deletion_characters)
 end
 
 p custom_delete1("cottage cheese", "c") # => "ottage heese"
@@ -68,7 +78,13 @@ p custom_delete1("cottage cheese", "ec") # => "ottag hs"
 
 #* Solution: Solve once.
 def custom_delete2(string, deletion_characters)
+    final_string = "" 
 
+    string.each_char do |current_char|
+        final_string << current_char unless deletion_characters.include?(current_char)
+    end
+
+    final_string
 end
 
 p custom_delete2("cottage cheese", "c") # => "ottage heese"
@@ -80,6 +96,13 @@ p custom_delete2("cottage cheese", "ec") # => "ottag hs"
 #* Solution: Solve it again
 def custom_delete3(string, deletion_characters)
 
+    final_string = "" 
+
+    string.each_char do |current_char|
+        final_string << current_char unless deletion_characters.include?(current_char)
+    end
+
+    final_string
 end
 
 p custom_delete3("cottage cheese", "c") # => "ottage heese"
@@ -99,7 +122,7 @@ puts "\n\nCustom Index: "
 
 #* Solution: Solve using the built-in index method.
 def custom_index1(string, search_term)
-
+    string.index(search_term)
 end
 
 p custom_index1("I am very handsome", "I") # => 0
@@ -111,7 +134,15 @@ p custom_index1("I am very handsome", "ma") # => nil
 
 #* Solution: Solve once using the custom approach.
 def custom_index2(string, search_term)
+    search_term_length = search_term.length   
 
+    string.chars.each_with_index do |current_char, current_index|
+        matched_index = string[current_index, search_term_length]
+
+        return current_index if matched_index == search_term
+    end
+    
+    nil 
 end
 
 p custom_index2("I am very handsome", "I") # => 0
@@ -123,7 +154,15 @@ p custom_index2("I am very handsome", "ma") # => nil
 
 #* Solution: Solve again.
 def custom_index3(string, search_term)
+    search_term_length = search_term.length   
 
+    string.chars.each_with_index do |current_char, current_index|
+        matched_index = string[current_index, search_term_length]
+
+        return current_index if matched_index == search_term
+    end
+
+    nil 
 end
 
 p custom_index3("I am very handsome", "I") # => 0
@@ -144,7 +183,7 @@ puts "\n\nCustom Join: "
 
 #* Solution: Solve using the built-in join method.
 def custom_join1(strings, delimiter)
-
+    strings.join(delimiter)
 end
 
 p custom_join1(["red", "green", "blue"], "!") # => "red!green!blue"
@@ -155,6 +194,15 @@ p custom_join1([], "$$$") # => ""
 #* Solution: Solve using the custom approach.
 def custom_join2(strings, delimiter)
 
+    joined_strings = "" 
+    final_index = strings.length - 1 
+
+    strings.each_with_index do |current_string, current_index|
+        joined_strings << current_string
+        joined_strings << delimiter unless current_index == final_index
+    end
+
+    joined_strings
 end
 
 p custom_join2(["red", "green", "blue"], "!") # => "red!green!blue"
@@ -165,6 +213,15 @@ p custom_join2([], "$$$") # => ""
 #* Solution: Solve again.
 def custom_join3(strings, delimiter)
 
+    joined_strings = "" 
+    final_index = strings.length - 1 
+
+    strings.each_with_index do |current_string, current_index|
+        joined_strings << current_string
+        joined_strings << delimiter unless current_index == final_index
+    end
+
+    joined_strings
 end
 
 p custom_join3(["red", "green", "blue"], "!") # => "red!green!blue"
@@ -184,7 +241,7 @@ puts "\n\nCustom Split: "
 
 #* Solution: Solve using the built-in split method.
 def custom_split1(text, delimiter)
-
+    text.split(delimiter)
 end
 
 p custom_split1("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
@@ -195,7 +252,20 @@ p custom_split1(" hello", " ") # => ["hello"]
 
 #* Solution: Solve using the custom approach.
 def custom_split2(text, delimiter)
+    segmented_strings = [] 
+    temporary_segment = "" 
 
+    text.each_char do |current_char|
+        if current_char == delimiter
+            segmented_strings << temporary_segment unless temporary_segment.empty? 
+            temporary_segment = "" 
+        else 
+            temporary_segment << current_char 
+        end
+    end
+
+    segmented_strings << temporary_segment unless temporary_segment.empty? 
+    segmented_strings
 end
 
 p custom_split2("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
@@ -207,6 +277,20 @@ p custom_split2(" hello", " ") # => ["hello"]
 #* Solution: Solve again.
 def custom_split3(text, delimiter)
 
+    segmented_strings = [] 
+    temporary_segment = ""
+
+    text.each_char do |current_char|
+        if current_char == delimiter 
+            segmented_strings << temporary_segment unless temporary_segment.empty? 
+            temporary_segment = ""
+        else 
+            temporary_segment << current_char
+        end
+    end
+
+    segmented_strings << temporary_segment unless temporary_segment.empty? 
+    segmented_strings
 end
 
 p custom_split3("Hi, my name is Boris", " ") # => ["Hi,", "my", "name", "is", "Boris"]
@@ -230,6 +314,16 @@ puts "\n\nThe Split Method: "
 #* Solution: Solve once.
 def longest_word1(strings)
 
+    words = strings.split(" ")
+    longest_word = words[0]
+
+    words.each do |current_string|
+        if current_string.length >= longest_word.length
+            longest_word = current_string
+        end
+    end
+
+    longest_word
 end
 
 p longest_word1("Bobby loves very big scary kangaroos too") # => "kangaroos"
@@ -239,7 +333,16 @@ p longest_word1("Hello") # => "Hello"
 
 #* Solution: Solve twice.
 def longest_word2(strings)
+    words = strings.split(" ")
+    longest_word = words[0]
 
+    words.each do |current_string|
+        if current_string.length >= longest_word.length   
+            longest_word = current_string
+        end
+    end
+
+    longest_word
 end
 
 p longest_word2("Bobby loves very big scary kangaroos too") # => "kangaroos"
@@ -250,6 +353,16 @@ p longest_word2("Hello") # => "Hello"
 #* Solution: Solve again.
 def longest_word3(strings)
 
+    words = strings.split(" ")
+    longest_word = words[0]
+
+    words.each do |current_string|
+        if current_string.length >= longest_word.length   
+            longest_word = current_string
+        end
+    end
+
+    longest_word
 end
 
 p longest_word3("Bobby loves very big scary kangaroos too") # => "kangaroos"

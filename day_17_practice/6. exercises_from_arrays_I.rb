@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 #* Exercise 1: Indexing into arrays.
 puts "Array Indexing: "
 
@@ -77,4 +75,3 @@ p split_in_two(["A", "B"]) # => [["A"], ["B"]]
 p split_in_two(["A", "B", "C", "D"]) # => [["A", "B"], ["C","D"]]
 p split_in_two(["A", "B", "C"]) # => [["A", "B"], ["C"]]
 p split_in_two(["A", "B", "C", "D", "E"]) # => [["A", "B", "C"],["D","E"]]
->>>>>>> Stashed changes

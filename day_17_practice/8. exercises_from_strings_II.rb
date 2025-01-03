@@ -9,7 +9,7 @@ puts "Custom Count: "
 
 #* Solution: Solve using the built-in count method.
 def custom_count1(strings, search_character)
-
+asdadada
 end
 
 p custom_count1("Hello World", "l") # => 3

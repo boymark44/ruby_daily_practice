@@ -307,8 +307,7 @@ puts
 
 #* Solution: Use select method.
 def words_with_letter(string_array, letter)
-
-
+    string_array.select { |string| string.include?(letter) }
 end
 
 p words_with_letter(["cat", "bat", "tub"], "a") # => ["cat", "bat"]
@@ -325,8 +324,7 @@ puts
 
 #* Solution: Use the partition method.
 def evens_and_odds(numbers_array)
-
-
+    numbers_array.partition { |element| element.even? }
 end
 
 p evens_and_odds([1, 2, 3, 4, 5]) # => [[2, 4], [1, 3, 5]]
@@ -344,7 +342,11 @@ puts "\n\nUnlimited Method Arguments For Strings: "
 
 #* Solution:
 def sum_of_string_lengths(*strings)
+    rolling_sum = 0 
 
+    strings.each { |current_element| rolling_sum += current_element.length }
+
+    rolling_sum
 end
 
 p sum_of_string_lengths("bob", "loves", "burgers") # => 15
@@ -362,8 +364,7 @@ puts "\n\nAny? and All?: "
 
 #* Solution: Use the any? method.
 def has_greater_than_seven_characters(array)
-
-
+    array.any? { |current_element| current_element.length > 7 }
 end
 
 p has_greater_than_seven_characters(["ruby", "exercise", "cat"]) # => true
@@ -378,8 +379,7 @@ puts
 
 #* Solution: Use the all? method.
 def against_all_odds(array)
-
-
+    array.all? { |current_element| current_element.even? }
 end
 
 p against_all_odds([3, 5, 7, 2]) # => false

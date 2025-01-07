@@ -27,7 +27,7 @@ puts custom_calculator(3, 5, "add") # => 8
 puts custom_calculator(2, 5, "subtract") # => -13
 puts custom_calculator(3, 5, "multiply") # => 15
 puts custom_calculator(20, 4, "divide") # => 5
-puts custom_calculator(16, 0, "divide") # => "Zero Division Error"
+puts custom_calculator(16, 0, "divide") # => "Cannot be divided by zero"
 puts custom_calculator(24, 56, "cannot_be") # => "Invalid Operation"
 puts
 
@@ -60,7 +60,7 @@ puts custom_calculator2(3, 5, :add) # => 8
 puts custom_calculator2(2, 5, :subtract) # => -13
 puts custom_calculator2(3, 5, :multiply) # => 15
 puts custom_calculator2(20, 4, :divide) # => 5
-puts custom_calculator2(16, 0, :divide) # => "Zero Division Error"
+puts custom_calculator2(16, 0, :divide) # => "Cannot be divided by zero"
 puts custom_calculator2(24, 56, :cannot_be) # => "Invalid Operation"
 puts
 
@@ -90,7 +90,7 @@ puts custom_calculator3(3, 5, "add") # => 8
 puts custom_calculator3(2, 5, "subtract") # => -13
 puts custom_calculator3(3, 5, "multiply") # => 15
 puts custom_calculator3(20, 4, "divide") # => 5
-puts custom_calculator3(16, 0, "divide") # => "Zero Division Error"
+puts custom_calculator3(16, 0, "divide") # => "Cannot be divided by zero"
 puts custom_calculator3(24, 56, "cannot_be") # => "Invalid Operation"
 puts
 

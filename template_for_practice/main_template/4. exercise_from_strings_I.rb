@@ -6,12 +6,9 @@ puts "\nString Index Position: "
 # and false otherwise.
 # Assume the string will always have 1 or more characters.
 
-#* Solution: Using the Bracket Syntax.
-def same_first_and_last_letter(string)
+#* Solution: Use the bracket syntax.
 
 
-
-end
 
 puts same_first_and_last_letter("runner") # => true
 puts same_first_and_last_letter("Runner") # => false
@@ -26,10 +23,8 @@ puts
 # string-ified digits to integers.
 
 #* Solution: Extract elements from index: 0, 1, and 2 then convert them into integers.
-def three_number_sum(numbers)
 
 
-end
 
 puts three_number_sum("123") # => 6
 puts three_number_sum("567") # => 18
@@ -44,20 +39,18 @@ puts "\n\nString Slicing: "
 # Define a first_three_characters method that accepts a string.
 # The method should return the first 3 characters of the string.
 
-#* Solution: Using bracket syntax.
-def first_three_characters(string)
+#* Solution: Use the bracket syntax.
 
-end
+
 
 puts first_three_characters("dynasty") # => dyn
 puts first_three_characters("empire") # => emp
 puts
 
 
-#* Solution: Using the each_char method.
-def first_three_characters2(string)
+#* Solution: Use the each_char method.
 
-end
+
 
 puts first_three_characters2("dynasty") # => dyn
 puts first_three_characters2("empire") # => emp
@@ -67,20 +60,18 @@ puts
 # Define a five_from_the_end method that accepts a string.
 # The method should return the last 5 characters of the string.
 
-#* Solution: Using a bracket syntax.
-def five_from_the_end(string)
+#* Solution: Use the bracket syntax.
 
-end
+
 
 puts five_from_the_end("dynasty") # => nasty
 puts five_from_the_end("rhinoceros") # => ceros
 puts
 
 
-# Using the slice method:
-def five_from_the_end(string)
+#* Solution: Use the slice method:
 
-end
+
 
 puts five_from_the_end("dynasty") # => nasty
 puts five_from_the_end("rhinoceros") # => ceros
@@ -95,9 +86,8 @@ puts "\n\nString Length and Comparison: "
 # the string has more than 7 characters.
 
 #* Solution:
-def long_word1(string)
 
-end
+
 
 puts long_word1("Ruby") # => false
 puts long_word1("Magnificent") # => true
@@ -109,9 +99,8 @@ puts
 # and false otherwise (including if they are equal in length).
 
 #* Solution:
-def first_longer_than_second(string1, string2)
 
-end
+
 
 puts first_longer_than_second("Python", "Ruby") # => true
 puts first_longer_than_second("cat", "mouse") # => false

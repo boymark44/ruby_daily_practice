@@ -18,10 +18,9 @@ def div(a, b)
   a / b
 end
 
-#* Solution: Use the if-elsif-else statements.
-def custom_calculator(a, b, operation)
+#* Write your function here: 
 
-end
+
 
 puts custom_calculator(3, 5, "add") # => 8
 puts custom_calculator(2, 5, "subtract") # => -13
@@ -32,9 +31,8 @@ puts custom_calculator(24, 56, "cannot_be") # => "Invalid Operation"
 puts
 
 
-# Solution suggested by Cody AI which is to use symbols instead of strings for operation names in the
-# custom_calculator method. This can improve performance and reduce the risk of typos:
-# Symbols are strings that you prepend a colon ":" instead of enclosing them with quotes.
+
+#* Solution: Use symbols for naming operations and implement using case operation: 
 def add(a, b)
   a + b
 end
@@ -51,10 +49,9 @@ def div(a, b)
   a / b
 end
 
-#* Solution: Use the "case" operation.
-def custom_calculator2(a, b, operation)
+#* Write your function here: 
 
-end
+
 
 puts custom_calculator2(3, 5, :add) # => 8
 puts custom_calculator2(2, 5, :subtract) # => -13
@@ -63,6 +60,7 @@ puts custom_calculator2(20, 4, :divide) # => 5
 puts custom_calculator2(16, 0, :divide) # => "Cannot be divided by zero"
 puts custom_calculator2(24, 56, :cannot_be) # => "Invalid Operation"
 puts
+
 
 
 #* Solution: Utilize the guard clauses to handle edge cases early or validation process then subsequently do the actual calculation via "case" operation.
@@ -82,9 +80,8 @@ def div(a, b)
   a / b
 end
 
-def custom_calculator3(a, b, operation)
+#* Write your function here: 
 
-end
 
 puts custom_calculator3(3, 5, "add") # => 8
 puts custom_calculator3(2, 5, "subtract") # => -13
@@ -105,9 +102,8 @@ puts "\n\nMultiple Conditions: "
 # It should return false otherwise.
 
 #* Solution:
-def divisible_by_three_and_four(num)
 
-end
+
 
 puts divisible_by_three_and_four(3) # => false
 puts divisible_by_three_and_four(4) # => false
@@ -122,9 +118,8 @@ puts
 # or if the string includes the character "B" (capital).
 
 #* Solution:
-def string_theory(string)
 
-end
+
 
 puts string_theory("Big Mac") # => true
 puts string_theory("Bank") # => true
@@ -142,9 +137,8 @@ puts "\n\nIf-Statements: "
 # If the integer is odd, the method should return the number - 3
 
 #* Solution:
-def even_or_odd_operations(integer)
 
-end
+
 
 puts even_or_odd_operations(2) # => 4
 puts even_or_odd_operations(0) # => 2
@@ -162,9 +156,8 @@ puts "\n\nIf-Elsif-Else Statements: "
 # If the number is zero, return the string "Zero Hero"
 
 #* Solution:
-def numeric_energy(number)
 
-end
+
 
 puts numeric_energy(5) # => Positive
 puts numeric_energy(10) # => Positive
@@ -175,9 +168,8 @@ puts
 
 
 #* Solution: Solving Numeric Energy using "case method" for better readability.
-def numeric_energy(number)
 
-end
+
 
 puts numeric_energy(5) # => Positive
 puts numeric_energy(10) # => Positive

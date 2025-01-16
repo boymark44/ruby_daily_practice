@@ -6,7 +6,7 @@ puts "Array Indexing: "
 # and return the result.
 # Assume the list will always have 1 or more elements.
 
-#* First and last elements:
+#* Solution: Use the bracket syntax:
 def first_and_last(string_array)
 
 end
@@ -22,10 +22,8 @@ puts
 # The method should return the product (multiplied total) of
 # all numbers at an even index (0, 2, 4).
 
-#* Product of even indices:
-def product_of_even_indices(integer_array)
+#* Solution: Use the bracket syntax:
 
-end
 
 p product_of_even_indices([1, 2, 3, 4, 5, 6]) # => 15
 p product_of_even_indices([3, 4, 3, 5, 3, 6]) # => 27
@@ -37,9 +35,9 @@ puts
 # letter of the last string in the array.
 # Assume the array will always have at least one string.
 
-#* First letter of last string:
+#* Solution: Use the 2D indexing: 
 def first_letter_of_last_string(string_array)
-  # Using the 2D indexing:
+  
 
 end
 
@@ -58,7 +56,7 @@ puts "\n\nExtracting Multiple Array Elements: "
 # If the original array has an odd number of elements,
 # ensure that the first new array has the greater number of elements.
 
-# Split in two:
+#* Solution: Get the array_length and midpoint. 
 def split_in_two(array)
 
 end
